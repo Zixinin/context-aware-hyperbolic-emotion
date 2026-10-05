@@ -1,6 +1,6 @@
 # Experiment 2.1 — paired multi-seed stability
 
-**Status: code prepared; new HPC GPU runs have not been submitted or verified.**
+**Status: job 3006384 failed in the first BERT smoke before training; v3 raw-key compatibility patch prepared for audited rerun. No new scientific seed has completed in Experiment 2.1.**
 
 Purpose: compare the existing Standard BERT and LGSA-GoEmotions protocols at the paired seeds **42, 123, 2026**, without a new modeling change. The complete user specification is in `docs/USER_EXPERIMENT_SPEC.md`.
 

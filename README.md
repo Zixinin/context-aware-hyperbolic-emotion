@@ -7,7 +7,7 @@ This repository records the staged FYP experiments. Hyperbolic modeling is a lat
 |---|---|---|
 | 1 — Standard BERT + GoEmotions | `experiments/exp1_bert_baseline/code/` | Original seed42 run and archived artifacts; raw bert-base-cased |
 | 2 — LGSA + GoEmotions | `experiments/exp2_lgsa/code/` | Original seed42 run; documented parent-map patch and sentiment-derived hierarchy v0 |
-| 2.1 — paired multi-seed stability | `experiments/exp2_1_multiseed/` | Code prepared; new GPU runs await user-operated HPC submission |
+| 2.1 — paired multi-seed stability | `experiments/exp2_1_multiseed/` | GPU job 3006384 stopped in BERT smoke raw-key verification; v3 compatibility fix prepared for audited rerun |
 
 Experiment2.1 uses paired seeds42/123/2026, reuses seed42 only after audit, and preserves each model's existing optimizer, loss, hierarchy and training protocol. New runs independently initialize from raw pretrained BERT; they never inherit Experiment1 fine-tuned weights or smoke weights.
 

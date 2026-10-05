@@ -32,16 +32,29 @@ def verify_raw(state, path):
     manifest = read(PROJECTS['bert'] / 'assets/manifest.json')
     require(path.resolve() == Path(manifest['model_snapshot']).resolve(), 'Raw model path mismatch')
     require(sha(path / 'model.safetensors') == manifest['model_sha256']['model.safetensors'], 'Raw weight file hash mismatch')
+    legacy_layernorm = []
     with safe_open(str(path / 'model.safetensors'), framework='pt', device='cpu') as raw:
         keys = set(raw.keys())
         for name, tensor in state.items():
-            raw_key = 'bert.' + name if 'bert.' + name in keys else name
-            require(raw_key in keys, 'Backbone tensor missing in RAW checkpoint: ' + name)
+            # The pinned cased checkpoint retains the older LayerNorm gamma/beta
+            # names. Transformers renames these to weight/bias when loading.
+            candidates = ['bert.' + name, name]
+            raw_key = next((key for key in candidates if key in keys), None)
+            if raw_key is None and name.endswith('.LayerNorm.weight'):
+                old = name[:-len('weight')] + 'gamma'
+                raw_key = next((key for key in ['bert.' + old, old] if key in keys), None)
+            elif raw_key is None and name.endswith('.LayerNorm.bias'):
+                old = name[:-len('bias')] + 'beta'
+                raw_key = next((key for key in ['bert.' + old, old] if key in keys), None)
+            require(raw_key is not None, 'Backbone tensor missing in RAW checkpoint: ' + name)
             reference = raw.get_tensor(raw_key)
             require(tensor.dtype == reference.dtype and torch.equal(tensor.detach().cpu(), reference), 'Backbone not raw: ' + name)
+            if raw_key.endswith(('.LayerNorm.gamma', '.LayerNorm.beta')):
+                legacy_layernorm.append(raw_key)
     return {'status': 'FRESH_RAW_CASED_INITIALIZATION_VERIFIED', 'backbone_sha256': digest(state),
             'raw_model_revision': REVISION, 'raw_file_sha256': manifest['model_sha256']['model.safetensors'],
-            'tensors_compared': len(state), 'trained_checkpoint_loaded': False,
+            'tensors_compared': len(state), 'legacy_layernorm_keys_verified': sorted(legacy_layernorm),
+            'trained_checkpoint_loaded': False,
             'optimizer_state_loaded': False, 'smoke_weights_loaded': False}
 
 

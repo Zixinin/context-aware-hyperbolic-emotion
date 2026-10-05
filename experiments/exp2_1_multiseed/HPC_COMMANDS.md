@@ -8,14 +8,14 @@ The source must first be committed to the local Git repository. A committed rele
 
 ```bash
 cd '/Users/fengzixin/Desktop/PSP303-FYP/context-aware-hyperbolic-emotion'
-python3 tools/build_hpc_release.py --archive-name fyp21_hpc_gpu_only_v2.tar.gz
-rsync -avP dist/fyp21_hpc_gpu_only_v2.tar.gz dist/fyp21_hpc_gpu_only_v2.tar.gz.sha256 \
+python3 tools/build_hpc_release.py --archive-name fyp21_hpc_layernorm_v3.tar.gz
+rsync -avP dist/fyp21_hpc_layernorm_v3.tar.gz dist/fyp21_hpc_layernorm_v3.tar.gz.sha256 \
   zixinfeng23@login.hpc.xjtlu.edu.cn:/gpfs/work/aac/zixinfeng23/fyp/
 ```
 
 `rsync -P` retains a partial transfer. Re-run the same upload command if disconnected; the archive checksum is verified before extraction. No data/model downloads are required.
 
-## 2. HPC: preserve the earlier package, install the GPU-only release and audit seed42
+## 2. HPC: preserve the failed GPU-only release, install v3 and audit seed42
 
 Log in from the Mac with `ssh zixinfeng23@login.hpc.xjtlu.edu.cn`, then run:
 
@@ -23,12 +23,13 @@ Log in from the Mac with `ssh zixinfeng23@login.hpc.xjtlu.edu.cn`, then run:
 (
 set -euo pipefail
 cd /gpfs/work/aac/zixinfeng23/fyp
-sha256sum -c fyp21_hpc_gpu_only_v2.tar.gz.sha256
-test ! -e FYP-Experiment-2.1-MultiSeed-cpu-report-v1
+sha256sum -c fyp21_hpc_layernorm_v3.tar.gz.sha256
+test ! -e FYP-Experiment-2.1-MultiSeed-failed-3006384
 test -e FYP-Experiment-2.1-MultiSeed
-test ! -e FYP-Experiment-2.1-MultiSeed/submission.json
-mv FYP-Experiment-2.1-MultiSeed FYP-Experiment-2.1-MultiSeed-cpu-report-v1
-tar -xzf fyp21_hpc_gpu_only_v2.tar.gz
+test "$(/gpfs/work/aac/zixinfeng23/.conda/envs/lgsa_goemo/bin/python -c 'import json; print(json.load(open("FYP-Experiment-2.1-MultiSeed/submission.json"))["train_job"])')" = 3006384
+test "$(sacct -j 3006384 --noheader --parsable2 --format=JobIDRaw,State,ExitCode | awk -F'|' '$1=="3006384" {print $2 "|" $3}')" = 'FAILED|1:0'
+mv FYP-Experiment-2.1-MultiSeed FYP-Experiment-2.1-MultiSeed-failed-3006384
+tar -xzf fyp21_hpc_layernorm_v3.tar.gz
 cd FYP-Experiment-2.1-MultiSeed
 unset PYTHONPATH PYTHONHOME PYTHONOPTIMIZE
 export PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1
@@ -38,9 +39,21 @@ export OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 MKL_NUM_THREADS=2
 )
 ```
 
-The old installed package is preserved under `-cpu-report-v1`, including its audit and logs. If it already has `submission.json`, stop and inspect the actual job before replacing it. The new audit checks existing artifacts and does no model training.
+The failed package and `runs/job3006384/` remain preserved under `-failed-3006384`; the earlier `-cpu-report-v1` backup remains untouched. The failed job was a BERT smoke setup failure, with no full runs. The new audit checks existing artifacts and does no model training.
 
 Expected final marker: `SEED42_AUDIT_PASS`. It will print each model's `REUSED_VERIFIED` or `RERUN_REQUIRED` and the exact training plan. An unavailable environment, source drift, or missing scheduler history is an audit error; paste the exact error instead of bypassing the gate.
+
+Before submitting v3, verify the actual cached raw BERT weights using the original BERT environment, with no GPU training:
+
+```bash
+cd /gpfs/work/aac/zixinfeng23/fyp/FYP-Experiment-2.1-MultiSeed
+unset PYTHONPATH PYTHONHOME PYTHONOPTIMIZE
+export PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1
+export HF_HUB_OFFLINE=1 HF_DATASETS_OFFLINE=1 TRANSFORMERS_OFFLINE=1
+/gpfs/work/aac/zixinfeng23/.conda/envs/fypemotion/bin/python -u preflight_raw.py
+```
+
+The required marker is `RAW_CASED_CPU_PREFLIGHT_PASS`; it reports the number of exact backbone tensor comparisons and legacy LayerNorm keys. A mismatch stops before another GPU request.
 
 If the directory is already installed and an audit merely needs to be retried, use:
 

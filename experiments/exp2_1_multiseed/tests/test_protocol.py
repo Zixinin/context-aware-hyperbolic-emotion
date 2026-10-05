@@ -106,6 +106,27 @@ class ProtocolTests(unittest.TestCase):
                 with self.assertRaises(RuntimeError):
                     run_model.verify_raw(state, base/'seed42_trained_checkpoint')
 
+    def test_raw_fingerprint_accepts_only_exact_legacy_layernorm_tensors(self):
+        import torch
+        from safetensors.torch import save_file
+        import run_model
+        from mslib import REVISION, sha
+        with tempfile.TemporaryDirectory() as t:
+            base = Path(t); raw = base/REVISION; raw.mkdir()
+            gamma = torch.arange(4, dtype=torch.float32)
+            beta = -gamma
+            save_file({'bert.embeddings.LayerNorm.gamma': gamma,
+                       'bert.embeddings.LayerNorm.beta': beta}, str(raw/'model.safetensors'))
+            write(base/'assets/manifest.json', {'model_snapshot': str(raw),
+                  'model_sha256': {'model.safetensors': sha(raw/'model.safetensors')}})
+            state = {'embeddings.LayerNorm.weight': gamma.clone(), 'embeddings.LayerNorm.bias': beta.clone()}
+            with mock.patch.dict(run_model.PROJECTS, {'bert': base}):
+                proof = run_model.verify_raw(state, raw)
+                self.assertEqual(proof['status'], 'FRESH_RAW_CASED_INITIALIZATION_VERIFIED')
+                self.assertEqual(len(proof['legacy_layernorm_keys_verified']), 2)
+                with self.assertRaisesRegex(RuntimeError, 'Backbone not raw'):
+                    run_model.verify_raw({**state, 'embeddings.LayerNorm.weight': gamma + 1}, raw)
+
     def test_accounting_gate_rejects_failed_or_missing_batch(self):
         import mslib
         with mock.patch.object(mslib, 'capture', return_value='123|COMPLETED|0:0|00:01:00||cpu=4'):
