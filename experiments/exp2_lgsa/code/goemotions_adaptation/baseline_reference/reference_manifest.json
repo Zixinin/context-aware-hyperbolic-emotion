@@ -1,0 +1,42 @@
+{
+  "experiment_name": "Standard BERT GoEmotions Baseline",
+  "fyp_experiment_number": 1,
+  "archive": "/Users/fengzixin/Desktop/PSP303-FYP/goemotions/backups/goemotions_bert_seed42_job2968116_20260921_141855.tar.gz",
+  "slurm_job_id_from_archive": "2968116",
+  "artifact_integrity": "8 copied files match archived SUCCESS.json SHA256",
+  "live_sacct_verified_this_session": false,
+  "metrics": {
+    "fixed_0.30": {
+      "threshold": 0.3,
+      "num_examples": 5427,
+      "micro_precision": 0.5594505651738446,
+      "micro_recall": 0.6177911202401644,
+      "micro_f1": 0.5871752515392702,
+      "macro_precision": 0.48689029694839064,
+      "macro_recall": 0.5070014993045263,
+      "macro_f1": 0.48622095169381463
+    },
+    "validation_selected": {
+      "threshold": 0.25,
+      "num_examples": 5427,
+      "micro_precision": 0.533096926713948,
+      "micro_recall": 0.641333544003792,
+      "micro_f1": 0.5822276411102345,
+      "macro_precision": 0.4683856767038339,
+      "macro_recall": 0.5314646646292652,
+      "macro_f1": 0.4873245063404651
+    }
+  },
+  "rare_f1_fixed_030": 0.3600104865353015,
+  "non_rare_f1_fixed_030": 0.5282911067466524,
+  "artifacts_sha256": {
+    "test_metrics.json": "2a281bfa190ffbc9afaaa553d3747c7fa100ee9b7c5fa1b35ec0ee1867c9f798",
+    "test_per_label_fixed_0.30.csv": "f11d6bfad84ce67e92a69cf5dba7b943eae6f599258466f57ca1616c262e0140",
+    "rare_label_metrics.json": "ebeae46e81880d122bd83dd053ca74ea569b5ebe7908f325818403c23b8c84cb",
+    "dataset_analysis/rare_labels.json": "e73d52c56803c84ea887c88b5f72170cb8d054b1f0a1e9f8f0ef6a45d890fac5",
+    "dataset_analysis/label_frequencies.csv": "ae3426b431003b5b86b278f9d0f2386bacfcdbce57750bc00a83f5377e2b089d",
+    "config.json": "bedf8736cd429eb4abaa7d1dec214e8923e49b58908b1d0ead210167adb157f7",
+    "environment.json": "16d86d5e810bc3adf1450a7b44a8127c282e38be9ec4129250ed9c7f5d7b7a06",
+    "threshold_selection.json": "b8a0b45b67322fe1ae51844eab0dd503686ec217dc755edecd0db2f2eb4ce7dd"
+  }
+}

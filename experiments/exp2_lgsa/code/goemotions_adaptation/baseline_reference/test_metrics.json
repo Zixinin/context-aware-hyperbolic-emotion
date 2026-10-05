@@ -1,0 +1,22 @@
+{
+  "fixed_0.30": {
+    "threshold": 0.3,
+    "num_examples": 5427,
+    "micro_precision": 0.5594505651738446,
+    "micro_recall": 0.6177911202401644,
+    "micro_f1": 0.5871752515392702,
+    "macro_precision": 0.48689029694839064,
+    "macro_recall": 0.5070014993045263,
+    "macro_f1": 0.48622095169381463
+  },
+  "validation_selected": {
+    "threshold": 0.25,
+    "num_examples": 5427,
+    "micro_precision": 0.533096926713948,
+    "micro_recall": 0.641333544003792,
+    "micro_f1": 0.5822276411102345,
+    "macro_precision": 0.4683856767038339,
+    "macro_recall": 0.5314646646292652,
+    "macro_f1": 0.4873245063404651
+  }
+}

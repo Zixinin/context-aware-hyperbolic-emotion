@@ -1,0 +1,4 @@
+# Linux HPC only. First install PyTorch from the official cu118 index.
+--extra-index-url https://download.pytorch.org/whl/cu118
+torch==2.6.0+cu118
+-r requirements-nlp.txt

@@ -1,0 +1,11 @@
+# Candidate only. Actual transitive lock is generated after successful HPC setup.
+torch-geometric==2.6.1
+transformers==4.44.2
+datasets==2.21.0
+numpy==1.26.4
+scipy==1.14.1
+scikit-learn==1.5.2
+pandas==2.2.3
+tqdm==4.66.5
+PyYAML==6.0.2
+swanlab>=0.3,<0.7

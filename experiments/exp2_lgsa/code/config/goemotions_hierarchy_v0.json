@@ -1,0 +1,229 @@
+{
+  "version": "sentiment-derived-v0",
+  "status": "ADOPTED_FOR_EXPERIMENT_2",
+  "root": "ROOT",
+  "root_is_prediction_target": false,
+  "num_fine_labels": 28,
+  "num_all_labels": 32,
+  "source_url": "https://github.com/google-research/google-research/blob/master/goemotions/data/sentiment_dict.json",
+  "source_local_sha256": "801f6f028082141bd38541a4b14d65b33bdc55d29c7b2aaa029fefecf206f76b",
+  "coarse_labels": [
+    {
+      "id": 28,
+      "name": "Positive"
+    },
+    {
+      "id": 29,
+      "name": "Negative"
+    },
+    {
+      "id": 30,
+      "name": "Ambiguous"
+    },
+    {
+      "id": 31,
+      "name": "Neutral"
+    }
+  ],
+  "labels": [
+    {
+      "fine_id": 0,
+      "fine_label": "admiration",
+      "coarse_id": 28,
+      "coarse_label": "Positive",
+      "rationale": "Google Research official sentiment_dict.json; sentiment grouping is not an ontological ground truth."
+    },
+    {
+      "fine_id": 1,
+      "fine_label": "amusement",
+      "coarse_id": 28,
+      "coarse_label": "Positive",
+      "rationale": "Google Research official sentiment_dict.json; sentiment grouping is not an ontological ground truth."
+    },
+    {
+      "fine_id": 2,
+      "fine_label": "anger",
+      "coarse_id": 29,
+      "coarse_label": "Negative",
+      "rationale": "Google Research official sentiment_dict.json; sentiment grouping is not an ontological ground truth."
+    },
+    {
+      "fine_id": 3,
+      "fine_label": "annoyance",
+      "coarse_id": 29,
+      "coarse_label": "Negative",
+      "rationale": "Google Research official sentiment_dict.json; sentiment grouping is not an ontological ground truth."
+    },
+    {
+      "fine_id": 4,
+      "fine_label": "approval",
+      "coarse_id": 28,
+      "coarse_label": "Positive",
+      "rationale": "Google Research official sentiment_dict.json; sentiment grouping is not an ontological ground truth."
+    },
+    {
+      "fine_id": 5,
+      "fine_label": "caring",
+      "coarse_id": 28,
+      "coarse_label": "Positive",
+      "rationale": "Google Research official sentiment_dict.json; sentiment grouping is not an ontological ground truth."
+    },
+    {
+      "fine_id": 6,
+      "fine_label": "confusion",
+      "coarse_id": 30,
+      "coarse_label": "Ambiguous",
+      "rationale": "Google Research official sentiment_dict.json; sentiment grouping is not an ontological ground truth."
+    },
+    {
+      "fine_id": 7,
+      "fine_label": "curiosity",
+      "coarse_id": 30,
+      "coarse_label": "Ambiguous",
+      "rationale": "Google Research official sentiment_dict.json; sentiment grouping is not an ontological ground truth."
+    },
+    {
+      "fine_id": 8,
+      "fine_label": "desire",
+      "coarse_id": 28,
+      "coarse_label": "Positive",
+      "rationale": "Google Research official sentiment_dict.json; sentiment grouping is not an ontological ground truth."
+    },
+    {
+      "fine_id": 9,
+      "fine_label": "disappointment",
+      "coarse_id": 29,
+      "coarse_label": "Negative",
+      "rationale": "Google Research official sentiment_dict.json; sentiment grouping is not an ontological ground truth."
+    },
+    {
+      "fine_id": 10,
+      "fine_label": "disapproval",
+      "coarse_id": 29,
+      "coarse_label": "Negative",
+      "rationale": "Google Research official sentiment_dict.json; sentiment grouping is not an ontological ground truth."
+    },
+    {
+      "fine_id": 11,
+      "fine_label": "disgust",
+      "coarse_id": 29,
+      "coarse_label": "Negative",
+      "rationale": "Google Research official sentiment_dict.json; sentiment grouping is not an ontological ground truth."
+    },
+    {
+      "fine_id": 12,
+      "fine_label": "embarrassment",
+      "coarse_id": 29,
+      "coarse_label": "Negative",
+      "rationale": "Google Research official sentiment_dict.json; sentiment grouping is not an ontological ground truth."
+    },
+    {
+      "fine_id": 13,
+      "fine_label": "excitement",
+      "coarse_id": 28,
+      "coarse_label": "Positive",
+      "rationale": "Google Research official sentiment_dict.json; sentiment grouping is not an ontological ground truth."
+    },
+    {
+      "fine_id": 14,
+      "fine_label": "fear",
+      "coarse_id": 29,
+      "coarse_label": "Negative",
+      "rationale": "Google Research official sentiment_dict.json; sentiment grouping is not an ontological ground truth."
+    },
+    {
+      "fine_id": 15,
+      "fine_label": "gratitude",
+      "coarse_id": 28,
+      "coarse_label": "Positive",
+      "rationale": "Google Research official sentiment_dict.json; sentiment grouping is not an ontological ground truth."
+    },
+    {
+      "fine_id": 16,
+      "fine_label": "grief",
+      "coarse_id": 29,
+      "coarse_label": "Negative",
+      "rationale": "Google Research official sentiment_dict.json; sentiment grouping is not an ontological ground truth."
+    },
+    {
+      "fine_id": 17,
+      "fine_label": "joy",
+      "coarse_id": 28,
+      "coarse_label": "Positive",
+      "rationale": "Google Research official sentiment_dict.json; sentiment grouping is not an ontological ground truth."
+    },
+    {
+      "fine_id": 18,
+      "fine_label": "love",
+      "coarse_id": 28,
+      "coarse_label": "Positive",
+      "rationale": "Google Research official sentiment_dict.json; sentiment grouping is not an ontological ground truth."
+    },
+    {
+      "fine_id": 19,
+      "fine_label": "nervousness",
+      "coarse_id": 29,
+      "coarse_label": "Negative",
+      "rationale": "Google Research official sentiment_dict.json; sentiment grouping is not an ontological ground truth."
+    },
+    {
+      "fine_id": 20,
+      "fine_label": "optimism",
+      "coarse_id": 28,
+      "coarse_label": "Positive",
+      "rationale": "Google Research official sentiment_dict.json; sentiment grouping is not an ontological ground truth."
+    },
+    {
+      "fine_id": 21,
+      "fine_label": "pride",
+      "coarse_id": 28,
+      "coarse_label": "Positive",
+      "rationale": "Google Research official sentiment_dict.json; sentiment grouping is not an ontological ground truth."
+    },
+    {
+      "fine_id": 22,
+      "fine_label": "realization",
+      "coarse_id": 30,
+      "coarse_label": "Ambiguous",
+      "rationale": "Google Research official sentiment_dict.json; sentiment grouping is not an ontological ground truth."
+    },
+    {
+      "fine_id": 23,
+      "fine_label": "relief",
+      "coarse_id": 28,
+      "coarse_label": "Positive",
+      "rationale": "Google Research official sentiment_dict.json; sentiment grouping is not an ontological ground truth."
+    },
+    {
+      "fine_id": 24,
+      "fine_label": "remorse",
+      "coarse_id": 29,
+      "coarse_label": "Negative",
+      "rationale": "Google Research official sentiment_dict.json; sentiment grouping is not an ontological ground truth."
+    },
+    {
+      "fine_id": 25,
+      "fine_label": "sadness",
+      "coarse_id": 29,
+      "coarse_label": "Negative",
+      "rationale": "Google Research official sentiment_dict.json; sentiment grouping is not an ontological ground truth."
+    },
+    {
+      "fine_id": 26,
+      "fine_label": "surprise",
+      "coarse_id": 30,
+      "coarse_label": "Ambiguous",
+      "rationale": "Google Research official sentiment_dict.json; sentiment grouping is not an ontological ground truth."
+    },
+    {
+      "fine_id": 27,
+      "fine_label": "neutral",
+      "coarse_id": 31,
+      "coarse_label": "Neutral",
+      "rationale": "Engineering-only singleton parent; neutral is outside the 27-emotion sentiment mapping."
+    }
+  ],
+  "display_name": "GoEmotions sentiment-derived hierarchy v0",
+  "supervision": "Coarse labels are derived from fine labels; not original ground-truth annotation",
+  "adopted_date": "2026-09-23"
+}

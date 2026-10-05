@@ -1,0 +1,69 @@
+{
+  "checked_at": "2026-09-16T08:15:34.028506+00:00",
+  "status": "PASS",
+  "scope": "static checks, import closure, synthetic CPU logic and official-file integrity ONLY",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "python": "3.12.3",
+  "packages": {
+    "torch": "2.6.0",
+    "transformers": "4.51.3",
+    "datasets": "3.5.0",
+    "accelerate": "1.6.0",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.6.1",
+    "matplotlib": "3.9.4",
+    "pyarrow": "19.0.1",
+    "huggingface-hub": "0.30.2",
+    "tokenizers": "0.21.1",
+    "safetensors": "0.5.3"
+  },
+  "checks": [
+    "Python 3.10 grammar",
+    "all shell/Slurm syntax",
+    "complete imports including actual BERT class",
+    "10 synthetic CPU unit tests",
+    "official TSV SHA-256 / labels / sizes / disjoint IDs",
+    "Mac training rejected"
+  ],
+  "official_split_sizes": {
+    "train": 43410,
+    "validation": 5426,
+    "test": 5427
+  },
+  "source_sha256": {
+    "config/baseline_bert.json": "3e1547226633469834eb8408540016b2768ada61c3d3a82706345b6806210299",
+    "hpc/activate_env.sh": "e50f3bb045c84829adec605b33064c4a1f24f908a83f3ae50bcecd5931f9c451",
+    "hpc/job_start.sh": "7fd812faa6802123b176ffabecbc930b1dd4808bc72d2473daeb30827bef4f5e",
+    "hpc/setup_environment.sh": "cd1512854d612646da5f2c16df597c297f041e5a04e3d54f6dce177e343e4b62",
+    "hpc/submit_baseline.sh": "b5078d6762eef7735b549d3c197aea475b1d2a7c1799663debd99c5a07164b08",
+    "requirements-nlp.txt": "a2a57ba55301905e3643369d75cdd569e7dffd2ba4fdfcd2e65fbd4d141c8293",
+    "requirements.txt": "89526a3c73081db9417926192e471dd844174e517db95fbfca083b7a1b4802b2",
+    "scripts/__init__.py": "81fdc50aae0ba8e5f351d754a59d71c40b3f7feb064e3b2148dc4a1cef452b50",
+    "scripts/analyze_dataset.py": "30757578bcf07ccfd41e7cd2ce2318c3800b509b12eae9b9eec8c45e30e1d7b6",
+    "scripts/check_environment.py": "57c68256a4641d568990dcd536c4c13777a59de237b7a03cd43b14b5dd766fa6",
+    "scripts/prepare_assets.py": "a2f33f270a480066244cfab89677c292952f6fef1795bf6d11b186186b7196c8",
+    "scripts/summarize_results.py": "073154fa6fca38dea4bc1aac6ed356513cad730b28e80ca9b30be92bfc2ae4f9",
+    "scripts/validate_local.py": "7e0dd062daaf92e45d2c8cb32c7ef70a5aafb5b797cbe4655fdd0205e8c11e9e",
+    "scripts/verify_run.py": "0cae65438115d072668aab13e16796d216e139c9a39ce205b4a88c432b4c02ee",
+    "slurm/baseline_bert_seed42.sbatch": "3f46d65b443227819c6ba61196d6399a827c7a7aede45122ec0ee471f0146efb",
+    "slurm/setup_assets.sbatch": "3a9ac5dfc34690dbb0a365e2698c4d24db92f2ea34101bbe7568e354a21b8ddc",
+    "slurm/smoke_test.sbatch": "6fc37f1f79edd9f5fa3c2b9288108365f7f88b8cec8e8ab61fe38684d4978d4b",
+    "src/__init__.py": "1ad3a9064d3ac41b4c6bc97a9caa88cea5fed91113feee52d499f0731d434818",
+    "src/common.py": "655e6d256340a933348baf5907bb5f4715c8bb1e432dcf009950c019c482155d",
+    "src/data.py": "62f02eecc578e5b47c9d82ddf06047734c3cc018464acbff574ea1a359027b9e",
+    "src/evaluate.py": "bb9507dd48af2ab017c97297e8e412a0d3d363d74ed46a483605e8a19360a9b0",
+    "src/metrics.py": "9b9298ff30c74b8c03beff9580be86f24a3eacf4652029c6719a95da2e891850",
+    "src/model.py": "8d14f5576d194a5ee1347798dcf02b5e93ef2ad5d23a61d7102cdef9799859e2",
+    "src/train.py": "172ecd64de8db4deb464abb78cbdc9fefeb879df29cfc7b603406140a5a0a39a",
+    "src/visualize.py": "cd46f36a4b0fe498db4aacd2ac6a080a4ef0ae604a152855622b9ab9e59805c2"
+  },
+  "not_executed": [
+    "HPC Python 3.10/cu118 runtime",
+    "model download",
+    "BERT forward/backward",
+    "Slurm smoke",
+    "full baseline"
+  ],
+  "limitation": "Temporary venv pins NLP packages and reuses existing local CPU PyTorch 2.6.0; this is not a Linux GPU environment test."
+}

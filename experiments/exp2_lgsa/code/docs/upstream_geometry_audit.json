@@ -1,0 +1,41 @@
+{
+  "scope": "CPU toy probes only; no BERT/PyG/CUDA/official-data execution",
+  "torch_version": "2.6.0",
+  "upstream_parent_map": {
+    "0": 3,
+    "1": 5,
+    "2": -1,
+    "3": -1,
+    "4": -1,
+    "5": -1
+  },
+  "expected_parent_map": {
+    "2": 0,
+    "3": 0,
+    "4": 1,
+    "5": 1,
+    "0": -1,
+    "1": -1
+  },
+  "reversed_parent_map_confirmed": true,
+  "correct_map_top_cosine": -4.163336342344337e-17,
+  "correct_map_sibling_residual_cosines": [
+    -4.85722573273506e-17,
+    -5.551115123125783e-17
+  ],
+  "upstream_map_changes_fine_vectors": false,
+  "rank_deficient_input_rows": 2,
+  "rank_deficient_output_rows": 1,
+  "all_zero_basis_raises": true,
+  "prototype_rows_frozen": true,
+  "ideal_parameter_receives_gradient_in_probe": false,
+  "hga_four_components_and_backward_finite": true,
+  "hga_components_sample": {
+    "global_orth": 0.054313089698553085,
+    "parent_child": 1.4342083930969238,
+    "len_decay": 0.07149815559387207,
+    "brother_res": 0.5688685774803162
+  },
+  "hga_total_sample": 2.007537364959717,
+  "warning": "brother_res reports the last family's loss, not the family mean used in total"
+}

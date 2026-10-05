@@ -1,0 +1,67 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environments
+.venv/
+venv/
+.env
+
+# Datasets
+数据集/
+data/
+datasets/
+
+# Model checkpoints
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+
+# Logs / cache
+logs/
+wandb/
+.cache/
+huggingface/
+
+# Temporary outputs
+tmp/
+
+# Preserve the user's original local projects (including nested Git histories).
+# Versioned, byte-identical source snapshots live in their sibling code/ folders.
+/experiments/exp1_bert_baseline/goemotions/
+/experiments/exp2_lgsa/LGSA-GoEmotions/
+
+# Generated artifacts, downloaded assets, and release archives
+**/backups/
+**/outputs/
+**/runs/
+**/assets/
+**/downloads/
+**/.pytest_cache/
+**/*.partial
+*.npz
+*.npy
+*.arrow
+*.parquet
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.whl
+/dist/
+/experiments/exp2_1_multiseed/RELEASE.json
+/experiments/exp2_1_multiseed/submission.json
+/experiments/exp2_1_multiseed/submission.lock
+/experiments/exp2_1_multiseed/audit/
+
+# Machine credentials and private shell files
+.env.*
+!.env.example
+*.pem
+*.key
