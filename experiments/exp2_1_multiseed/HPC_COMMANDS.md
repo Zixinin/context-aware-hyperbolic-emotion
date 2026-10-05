@@ -8,14 +8,14 @@ The source must first be committed to the local Git repository. A committed rele
 
 ```bash
 cd '/Users/fengzixin/Desktop/PSP303-FYP/context-aware-hyperbolic-emotion'
-python3 tools/build_hpc_release.py
-rsync -avP dist/fyp21_hpc.tar.gz dist/fyp21_hpc.tar.gz.sha256 \
+python3 tools/build_hpc_release.py --archive-name fyp21_hpc_gpu_only_v2.tar.gz
+rsync -avP dist/fyp21_hpc_gpu_only_v2.tar.gz dist/fyp21_hpc_gpu_only_v2.tar.gz.sha256 \
   zixinfeng23@login.hpc.xjtlu.edu.cn:/gpfs/work/aac/zixinfeng23/fyp/
 ```
 
 `rsync -P` retains a partial transfer. Re-run the same upload command if disconnected; the archive checksum is verified before extraction. No data/model downloads are required.
 
-## 2. HPC: install the new directory and audit seed42
+## 2. HPC: preserve the earlier package, install the GPU-only release and audit seed42
 
 Log in from the Mac with `ssh zixinfeng23@login.hpc.xjtlu.edu.cn`, then run:
 
@@ -23,12 +23,12 @@ Log in from the Mac with `ssh zixinfeng23@login.hpc.xjtlu.edu.cn`, then run:
 (
 set -euo pipefail
 cd /gpfs/work/aac/zixinfeng23/fyp
-sha256sum -c fyp21_hpc.tar.gz.sha256
-test ! -e FYP-Experiment-2.1-MultiSeed || {
-  echo 'Directory already exists: stop to avoid overwriting code or run evidence.' >&2
-  exit 1
-}
-tar -xzf fyp21_hpc.tar.gz
+sha256sum -c fyp21_hpc_gpu_only_v2.tar.gz.sha256
+test ! -e FYP-Experiment-2.1-MultiSeed-cpu-report-v1
+test -e FYP-Experiment-2.1-MultiSeed
+test ! -e FYP-Experiment-2.1-MultiSeed/submission.json
+mv FYP-Experiment-2.1-MultiSeed FYP-Experiment-2.1-MultiSeed-cpu-report-v1
+tar -xzf fyp21_hpc_gpu_only_v2.tar.gz
 cd FYP-Experiment-2.1-MultiSeed
 unset PYTHONPATH PYTHONHOME PYTHONOPTIMIZE
 export PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1
@@ -38,7 +38,7 @@ export OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 MKL_NUM_THREADS=2
 )
 ```
 
-This is read-only hashing, metadata and saved-prediction/data checking; it performs no model forward/backward. If your site requires even these CPU checks to be scheduled, run the audit command inside an ordinary CPU allocation. It does not need a GPU.
+The old installed package is preserved under `-cpu-report-v1`, including its audit and logs. If it already has `submission.json`, stop and inspect the actual job before replacing it. The new audit checks existing artifacts and does no model training.
 
 Expected final marker: `SEED42_AUDIT_PASS`. It will print each model's `REUSED_VERIFIED` or `RERUN_REQUIRED` and the exact training plan. An unavailable environment, source drift, or missing scheduler history is an audit error; paste the exact error instead of bypassing the gate.
 
@@ -62,9 +62,9 @@ export PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1
 )
 ```
 
-This validates both batch scripts with `sbatch --test-only`, submits **one gpu4090 job** (1GPU,4CPU,20GB, maximum6h), then a dependent **cpu8358 reporting job** (2CPU,8GB, maximum1h). The wall-time requests are limits, not predictions of actual training duration. Normal plan: two smoke paths, four new full runs, reuse both seed42 records. If a seed42 audit finds an actual mismatch, only that model's seed42 is added.
+This validates the single batch script with `sbatch --test-only`, then submits **one gpu4090 job** (1GPU,4CPU,20GB, maximum8h) that includes smoke, training and report generation. The wall-time request is a limit, not a prediction of actual training duration. Normal plan: two smoke paths, four new full runs, reuse both seed42 records. If a seed42 audit finds an actual mismatch, only that model's seed42 is added.
 
-Notifications go to the existing school email: training BEGIN/END/FAIL, reporting END/FAIL. The report job starts only after the GPU job succeeds. Failed dependencies cancel reporting. Do not interpret an END email alone as proof of scientific validity.
+Notifications go to the existing school email: GPU job BEGIN/END/FAIL. Do not interpret an END email alone as proof of scientific validity.
 
 ## 4. HPC: check queue, accounting and results
 
@@ -79,11 +79,11 @@ During training, each phase has its own log under `runs/job<GPU_JOB>/`. For exam
 tail -n 60 runs/job<GPU_JOB>/bert_seed123.log
 ```
 
-Replace `<GPU_JOB>` with the actual numeric ID printed at submission. After completion `status.py` prints `EXPERIMENT_2_1_COMPLETE_VERIFIED` only when both jobs finished COMPLETED/0:0 and report hashes pass. It then displays the final Markdown report.
+Replace `<GPU_JOB>` with the actual numeric ID printed at submission. After completion `status.py` prints `EXPERIMENT_2_1_COMPLETE_VERIFIED` only when the GPU main job, batch and steps finished COMPLETED/0:0 and report hashes pass. It then displays the final Markdown report. If the job is still pending/running, a nonzero gate means to wait; do not resubmit it.
 
-## If only report submission fails
+## If submission or a run fails
 
-`submission.json` records the GPU job immediately. **Do not re-submit training.** Inspect that file and the scheduler rejection; after resolving CPU partition/account eligibility, use `retry_report.py` to submit the report alone. The exact error is needed if a partition/QOS change is necessary.
+If `submit.py` fails at `sbatch --test-only`, no GPU job has been submitted and no `submission.json` exists. Capture the exact Slurm error. After a GPU job is submitted, `submission.json` records its ID; **do not resubmit training** if `status.py` cannot yet certify it. Inspect `sacct` and the logs first.
 
 ## GitHub
 

@@ -129,6 +129,35 @@ class ProtocolTests(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError, 'Missing/unexpected'):
                 verify(root)
 
+    def test_gpu_only_submission_and_report_gate(self):
+        submit = (ROOT/'submit.py').read_text()
+        shell = (ROOT/'slurm/train_chain.sbatch').read_text()
+        self.assertIn("'slurm/train_chain.sbatch'", submit)
+        self.assertNotIn('finalize.sbatch', submit)
+        self.assertNotIn('afterok:', submit)
+        self.assertIn('#SBATCH --partition=gpu4090', shell)
+        self.assertIn('#SBATCH --gres=gpu:1', shell)
+        self.assertLess(shell.index('python -u chain.py'), shell.index('python -u finalize.py'))
+        self.assertFalse((ROOT/'slurm/finalize.sbatch').exists())
+
+    def test_preliminary_report_promotion_is_deterministic(self):
+        import hashlib
+        from status import BANNER, PRELIMINARY_END, FINAL_END, HEADING, final_summary_text, verify_preliminary_report
+        source = HEADING + BANNER + 'Body\n\n' + PRELIMINARY_END + '\n'
+        with tempfile.TemporaryDirectory() as t:
+            report = Path(t)
+            summary = report/'MULTISEED_SUMMARY.md'
+            summary.write_text(source)
+            manifest = {'artifacts_sha256': {'MULTISEED_SUMMARY.md': hashlib.sha256(source.encode()).hexdigest()}}
+            verify_preliminary_report(report, manifest)
+            summary.write_text(final_summary_text(source))
+            self.assertNotIn(BANNER, summary.read_text())
+            self.assertIn(FINAL_END, summary.read_text())
+            verify_preliminary_report(report, manifest)
+            summary.write_text(summary.read_text().replace(FINAL_END, 'tampered'))
+            with self.assertRaises(RuntimeError):
+                verify_preliminary_report(report, manifest)
+
     def test_synthetic_reporting_completeness(self):
         # This fixture never enters outputs/ and has no SUCCESS markers.
         with tempfile.TemporaryDirectory(prefix='fyp21-synthetic-unit-') as temp:

@@ -8,7 +8,7 @@
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=20000M
 #SBATCH --gres=gpu:1
-#SBATCH --time=06:00:00
+#SBATCH --time=08:00:00
 #SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --mail-user=Zixin.Feng23@student.xjtlu.edu.cn
 #SBATCH --output=logs/%x-%j.out
@@ -32,5 +32,6 @@ hostname
 date --iso-8601=seconds
 nvidia-smi
 /gpfs/work/aac/zixinfeng23/.conda/envs/lgsa_goemo/bin/python -u chain.py
+/gpfs/work/aac/zixinfeng23/.conda/envs/lgsa_goemo/bin/python -u finalize.py --train-job "$SLURM_JOB_ID"
 date --iso-8601=seconds
-echo TRAINING_CHAIN_EXIT_ZERO
+echo GPU_TRAINING_AND_REPORT_PASS_AWAITING_SLURM_COMPLETION

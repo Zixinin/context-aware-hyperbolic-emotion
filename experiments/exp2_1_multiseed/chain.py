@@ -74,7 +74,7 @@ def main():
         require(len(ledger['runs']) == 6, 'Scientific run set incomplete')
         ledger.update(status='TRAINING_PHASES_PASS_AWAITING_SLURM_COMPLETION', end_time=now())
         write(path, ledger)
-        print('TRAINING_PHASES_PASS; dependent CPU finalizer verifies Slurm COMPLETED/0:0 before reporting', flush=True)
+        print('TRAINING_PHASES_PASS; GPU report stage follows, then status.py verifies final Slurm COMPLETED/0:0', flush=True)
     except BaseException as exc:
         ledger.update(status='FAILED', end_time=now(), error=repr(exc))
         write(path, ledger)

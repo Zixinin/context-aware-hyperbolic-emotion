@@ -18,7 +18,10 @@ def sha(path):
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('--development', action='store_true', help='Local checks only; this archive cannot be submitted to HPC')
+    p.add_argument('--archive-name', default='fyp21_hpc.tar.gz', help='Versioned .tar.gz filename for a replacement release')
     args = p.parse_args()
+    if Path(args.archive_name).name != args.archive_name or not args.archive_name.endswith('.tar.gz'):
+        raise SystemExit('Archive name must be a simple .tar.gz filename')
     files = sorted(p for p in PACKAGE.rglob('*') if p.is_file() and not any(x in EXCLUDED or x.startswith('.') for x in p.relative_to(PACKAGE).parts)
                    and p.name not in {'RELEASE.json', 'submission.json', 'submission.lock'} and p.suffix != '.pyc')
     commit = subprocess.check_output(['git', '-C', str(REPO), 'rev-parse', 'HEAD'], text=True).strip()
@@ -32,12 +35,12 @@ def main():
                 'development_only': args.development, 'files_sha256': {str(p.relative_to(PACKAGE)): sha(p) for p in files}}
     (PACKAGE/'RELEASE.json').write_text(json.dumps(manifest, indent=2) + '\n')
     dist = REPO/'dist'; dist.mkdir(exist_ok=True)
-    archive = dist/'fyp21_hpc.tar.gz'
+    archive = dist/args.archive_name
     with tarfile.open(archive, 'w:gz') as tf:
         for f in files + [PACKAGE/'RELEASE.json']:
             tf.add(f, arcname='FYP-Experiment-2.1-MultiSeed/' + str(f.relative_to(PACKAGE)), recursive=False)
     checksum = sha(archive)
-    (dist/'fyp21_hpc.tar.gz.sha256').write_text(checksum + '  fyp21_hpc.tar.gz\n')
+    (dist/(args.archive_name + '.sha256')).write_text(checksum + '  ' + args.archive_name + '\n')
     print('DEVELOPMENT_ONLY' if args.development else 'COMMITTED_HPC_RELEASE_READY')
     print('source_commit:', manifest['git_commit'])
     print('files:', len(files), 'archive_bytes:', archive.stat().st_size)

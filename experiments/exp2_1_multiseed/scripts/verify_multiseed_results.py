@@ -9,7 +9,7 @@ from metrics_ms import load_predictions, probabilities, threshold_search, score,
 from evidence_ms import check_geometry
 
 
-def verify(output):
+def verify(output, active_job=None, check_checkpoint_hashes=True):
     output = Path(output)
     records, reference = [], None
     jobs = {}
@@ -24,14 +24,23 @@ def verify(output):
         for seed in SEEDS:
             path = base / ('seed' + str(seed))
             s = read(path / 'SUCCESS.json')
-            require(s['status'] == 'NORMALIZED_RUN_PASS' and s['model'] == model and s['seed'] == seed, 'Success identity mismatch')
+            require(s['model'] == model and s['seed'] == seed, 'Success identity mismatch')
             hashes = artifacts(path, s)
             require(required <= hashes.keys(), 'Required artifacts missing')
             m = read(path / 'experiment_metadata.json')
-            require(m['model'] == model and m['seed'] == seed and m['phase'] == 'full' and m['status'] == 'COMPLETED', 'Model/seed/phase mismatch')
-            require(m['slurm_state'] == 'COMPLETED' and m['slurm_exit_code'] == '0:0', 'Invalid recorded accounting')
+            require(m['model'] == model and m['seed'] == seed and m['phase'] == 'full', 'Model/seed/phase mismatch')
             job = m['slurm_job_id']
-            if job not in jobs:
+            pending = active_job is not None and job == active_job
+            if pending:
+                require(m['status'] == 'AWAITING_SLURM_COMPLETION' and m['slurm_state'] == 'RUNNING'
+                        and m['slurm_exit_code'] is None and s['status'] == 'NORMALIZED_AWAITING_SLURM',
+                        'Active-job record falsely claims completion')
+                jobs[job] = {'job_id': job, 'state': 'AWAITING_SLURM_COMPLETION'}
+            else:
+                require(m['status'] == 'COMPLETED' and m['slurm_state'] == 'COMPLETED'
+                        and m['slurm_exit_code'] == '0:0' and s['status'] == 'NORMALIZED_RUN_PASS',
+                        'Invalid recorded accounting')
+            if not pending and job not in jobs:
                 jobs[job] = sacct(job)
             require(m['dataset_split_sizes'] == SIZES and m['label_names'] == NAMES and m['num_labels'] == 28, 'Dataset/labels mismatch')
             require(m['raw_model_revision'] == REVISION and m['rare_ids'] == RARE and m['fixed_threshold'] == .3, 'Model/evaluation mismatch')
@@ -41,7 +50,8 @@ def verify(output):
             require(m['orchestration_release_sha256'] == release(), 'Code release mismatch')
             require(sha(Path(m['native_run_directory']) / 'SUCCESS.json') == m['native_success_sha256'], 'Native lineage changed')
             checkpoint = read(path / 'checkpoint_info.json')
-            require(sha(checkpoint['path']) == checkpoint['sha256'], 'Best checkpoint changed')
+            if check_checkpoint_hashes:
+                require(sha(checkpoint['path']) == checkpoint['sha256'], 'Best checkpoint changed')
             if model == 'lgsa':
                 require(m['lgsa_patch_commit'] == PATCH and m['hierarchy_sha256'] == sha(ROOT / 'frozen/hierarchy.json'), 'LGSA source/hierarchy mismatch')
                 require('geometry_acceptance.json' in hashes, 'Geometry artifact missing')

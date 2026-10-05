@@ -12,8 +12,8 @@ Purpose: compare the existing Standard BERT and LGSA-GoEmotions protocols at the
 4. One infrastructure smoke stage in a GPU allocation, covering both changed runner paths: each uses the existing 1000 training / 500 validation examples and one smoke epoch. Smoke never evaluates test data and never enters the scientific summary.
 5. BERT full seeds123 and2026, plus seed42 only if its audited artifacts require rerunning.
 6. LGSA full seeds123 and2026, plus seed42 only if required.
-7. Wait for the GPU job and its batch step to be **COMPLETED / 0:0**.
-8. A dependent CPU job verifies all six records, normalizes artifact names, produces both threshold comparisons, all requested label analyses, figures and `MULTISEED_SUMMARY.md`, then stops.
+7. Inside the same GPU allocation, verify all six records, normalize artifacts, and produce both threshold comparisons, label analyses, figures and a preliminary `MULTISEED_SUMMARY.md`.
+8. Once the sole GPU job and its batch/steps are **COMPLETED / 0:0**, run `status.py` to certify the report and mark the six records final.
 
 The runtime order is gated. Preparing the code locally does not certify that either remote seed42 is reusable. Audit outputs explicitly distinguish `REUSED_VERIFIED`, `RERUN_REQUIRED` and an audit blocked by missing/current-incompatible infrastructure.
 
@@ -92,6 +92,8 @@ outputs/job<GPU_JOB>/
     threshold_ranking_comparison.csv
     figures/                   # PNG + PDF; both threshold settings
     MULTISEED_SUMMARY.md
+    PRELIMINARY.json
+    INTEGRITY_PRELIMINARY.json
     INTEGRITY_PASS.json
     SUCCESS.json
 ```
@@ -100,6 +102,6 @@ Normalized seed42 views are newly created from existing logits; original artifac
 
 ## Verification boundary
 
-Local tests cover metrics/counts, exact historical BERT prediction regression, seed propagation, raw-weight verification, failure gates and complete synthetic report generation. They do not validate RTX4090 training or current HPC files. Those checks run on HPC in the gated order above. A success marker inside a still-running job is not final scheduler completion: use `status.py` after both jobs end.
+Local tests cover metrics/counts, exact historical BERT prediction regression, seed propagation, raw-weight verification, failure gates and complete synthetic report generation. They do not validate RTX4090 training or current HPC files. Those checks run on HPC in the gated order above. A preliminary report inside a still-running job is not final scheduler completion: use `status.py` after the GPU job ends.
 
-If the GPU job fails, the dependent report job is cancelled and no final result is certified. Because the specification requires the containing Slurm job to finish successfully, earlier phases inside a failed allocation are not silently reused. Inspect the cause before preparing a separate retry.
+If the GPU job fails, no final result is certified. Because the specification requires the containing Slurm job to finish successfully, earlier phases inside a failed allocation are not silently reused. Inspect the cause before preparing a separate retry.

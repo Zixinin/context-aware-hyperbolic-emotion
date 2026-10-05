@@ -77,10 +77,13 @@ def normalize(entry, audit, destination):
                 csvwrite(temporary / ('per_label_' + name + '_metrics.csv'), labels)
                 rare[name] = {'rare_f1': metrics['rare_f1'], 'nonrare_f1': metrics['nonrare_f1']}
     write(temporary / 'rare_label_metrics.json', rare)
-    record = {'status': 'COMPLETED', 'experiment': 'FYP Experiment 2.1 — Multi-Seed Stability Verification',
+    completed = entry['decision'] == 'REUSED_VERIFIED'
+    record = {'status': 'COMPLETED' if completed else 'AWAITING_SLURM_COMPLETION',
+        'experiment': 'FYP Experiment 2.1 — Multi-Seed Stability Verification',
         'model': model, 'seed': seed, 'phase': 'full', 'seed42_decision': entry['decision'], 'decision_reason': entry['reason'],
         'native_run_directory': str(src), 'native_success_sha256': entry['success_sha256'],
-        'slurm_job_id': entry['job_id'], 'slurm_state': 'COMPLETED', 'slurm_exit_code': '0:0',
+        'slurm_job_id': entry['job_id'], 'slurm_state': 'COMPLETED' if completed else 'RUNNING',
+        'slurm_exit_code': '0:0' if completed else None,
         'raw_model_repo': 'google-bert/bert-base-cased', 'raw_model_revision': REVISION,
         'dataset': 'google-research-datasets/go_emotions', 'dataset_config': 'simplified',
         'dataset_revision': 'add492243ff905527e67aeb8b80c082af02207c3', 'dataset_split_sizes': SIZES,
@@ -97,7 +100,8 @@ def normalize(entry, audit, destination):
         'hierarchy_sha256': sha(ROOT / 'frozen/hierarchy.json') if model == 'lgsa' else None,
         'derived_at': now(), 'derivation': 'Metrics and counts from existing logits; no additional training or test inference'}
     write(temporary / 'experiment_metadata.json', record)
-    write(temporary / 'SUCCESS.json', {'status': 'NORMALIZED_RUN_PASS', 'model': model, 'seed': seed,
+    write(temporary / 'SUCCESS.json', {'status': 'NORMALIZED_RUN_PASS' if completed else 'NORMALIZED_AWAITING_SLURM',
+        'model': model, 'seed': seed,
         'native_success_sha256': entry['success_sha256'],
         'artifacts_sha256': {p.name: sha(p) for p in sorted(temporary.iterdir()) if p.is_file()}})
     temporary.rename(destination)

@@ -29,7 +29,10 @@ def main():
     require(not any(isinstance(n, ast.Call) and isinstance(n.func, ast.Attribute) and n.func.attr in banned for n in ast.walk(tree)), 'New training math in wrapper')
     train_shell = (ROOT / 'slurm/train_chain.sbatch').read_text()
     require('set -euo pipefail' in train_shell and '#SBATCH --gres=gpu:1' in train_shell, 'Slurm failure/resource gate missing')
-    require('afterok:' in (ROOT / 'submit.py').read_text(), 'Finalizer must wait for success')
+    require('python -u chain.py' in train_shell and 'python -u finalize.py --train-job "$SLURM_JOB_ID"' in train_shell,
+            'GPU training must gate reporting inside the same allocation')
+    submit = (ROOT / 'submit.py').read_text()
+    require('finalize.sbatch' not in submit and 'report_job' not in submit, 'CPU report submission remains')
     print('MULTISEED_STATIC_CHECK_PASS', len(manifest['files_sha256']), 'release files')
 
 

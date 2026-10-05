@@ -17,7 +17,7 @@ def table(headers, rows):
                      ['| ' + ' | '.join(map(str, row)) + ' |' for row in rows])
 
 
-def generate(records, out):
+def generate(records, out, provisional=False):
     out = Path(out)
     out.mkdir(parents=True, exist_ok=False)
     overall, curves, thresholds, perlabel = [], [], [], {}
@@ -112,7 +112,7 @@ def generate(records, out):
     csvwrite(out / 'threshold_ranking_comparison.csv', ranks)
     make_figures(out / 'figures', means, lookup, label_rows, curves)
     write_summary(out, records, means, pairs, delta_stats, rare_rows, grief_relief, label_rows,
-                  count_rows, distribution, tradeoff, thresholds, ranks)
+                  count_rows, distribution, tradeoff, thresholds, ranks, provisional=provisional)
     return {'scientific_runs': 6, 'overall_rows': len(overall), 'validation_curve_rows': len(curves),
             'std_ddof': 1, 'threshold_settings': SETTINGS, 'statistical_tests': 'none',
             'plot_count': len(list((out / 'figures').glob('*.png')))}
@@ -172,7 +172,7 @@ def make_figures(out, means, lookup, labels, curves):
     save(fig, 'validation_macro_curves')
 
 
-def write_summary(out, records, means, pairs, delta_stats, rare, grief, labels, counts, distribution, tradeoff, thresholds, ranks):
+def write_summary(out, records, means, pairs, delta_stats, rare, grief, labels, counts, distribution, tradeoff, thresholds, ranks, provisional=False):
     parts = ['# Experiment 2.1 — Multi-Seed Stability Verification',
         '\n## 1. Experimental protocol\n',
         'Standard BERT 与 LGSA-GoEmotions sentiment-derived hierarchy v0；配对 seeds：42、123、2026。'
@@ -264,6 +264,11 @@ def write_summary(out, records, means, pairs, delta_stats, rare, grief, labels, 
     all_win = all(pairs['fixed_0.30', s][k] > 0 for s in SEEDS for k in ['macro_f1', 'rare_f1'])
     parts.append('固定阈值下，Macro-F1 与 Rare F1 均在全部受测 seeds 呈现正向改善；改善幅度及其种子敏感性应结合上述范围和 SD 解读。'
                  if all_win else '固定阈值下，Macro-F1 和 Rare F1 的改善未同时覆盖所有受测 seeds；seed42 的结果不能直接推广到其余 seeds。')
-    parts += ['\n全部科研训练记录已核对 Slurm COMPLETED/0:0、checkpoint、产物哈希、28 类指标与配对样本。'
-              'Smoke 指标未进入任何科学汇总。输出完成后停止；未运行 loss ablation 或 Hyperbolic 实验。']
+    if provisional:
+        parts.insert(1, '**预验收：GPU 作业仍在运行。须待主作业及 batch/全部 step 均为 COMPLETED/0:0，并运行 status.py，方可视作最终结果。**')
+        parts += ['\n六组记录的科研产物、checkpoint、28 类指标与配对样本已完成作业内检查；新运行的 Slurm 终态待核对。'
+                  'Smoke 指标未进入任何科学汇总。未运行 loss ablation 或 Hyperbolic 实验。']
+    else:
+        parts += ['\n全部科研训练记录已核对 Slurm COMPLETED/0:0、checkpoint、产物哈希、28 类指标与配对样本。'
+                  'Smoke 指标未进入任何科学汇总。输出完成后停止；未运行 loss ablation 或 Hyperbolic 实验。']
     (out / 'MULTISEED_SUMMARY.md').write_text('\n\n'.join(parts) + '\n')
