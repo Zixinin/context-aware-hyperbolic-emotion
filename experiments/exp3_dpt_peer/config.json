@@ -1,0 +1,10 @@
+{
+  "experiment_name": "LGSA-GoEmotions-DPT-derived-peer-seed42",
+  "seed": 42,
+  "peer_loss_enabled": true,
+  "peer_lambda": 0.5,
+  "peer_temperature": 0.1,
+  "peer_top_k": 1,
+  "primary_fixed_threshold": 0.30,
+  "scope": "seed42 pilot; no multi-seed or hyperparameter sweep"
+}
