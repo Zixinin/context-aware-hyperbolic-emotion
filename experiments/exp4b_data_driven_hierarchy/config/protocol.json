@@ -1,0 +1,21 @@
+{
+  "experiment": "Exp4B full data-driven hierarchy seed42 pilot",
+  "authorized_seed": 42,
+  "hierarchy_artifact": "hierarchy_primary_support70.json",
+  "hierarchy_sha256": "8730c6b519c2ba7723c7cb93f0bddbcde57d79676443fbde406f0acb4195471d",
+  "old_hierarchy_depth": 2,
+  "new_hierarchy_depth": 9,
+  "old_total_input_length": 54,
+  "new_total_input_length": 68,
+  "text_window": 50,
+  "final_classifier_output_dimension": 28,
+  "old_hierarchy_supervision_nodes": 32,
+  "new_hierarchy_supervision_nodes": 56,
+  "sequence_length_change": "hierarchy-induced deterministic/derived sequence-length change",
+  "hierarchy_pruning": false,
+  "hierarchy_flattening": false,
+  "manual_reconnection": false,
+  "peer_loss": false,
+  "other_ablations": false,
+  "multi_seed_training_authorized_in_current_stage": false
+}
