@@ -1,0 +1,19 @@
+{
+  "experiment": "Exp4B full hierarchy multi-seed and read-only diagnostics",
+  "seeds": [42, 123, 2026],
+  "new_training_seeds": [123, 2026],
+  "reuse_completed_seed42": true,
+  "threshold": 0.30,
+  "text_window": 50,
+  "total_input_length": 68,
+  "hierarchy_sha256": "8730c6b519c2ba7723c7cb93f0bddbcde57d79676443fbde406f0acb4195471d",
+  "std_ddof": 1,
+  "prediction_count_ratio": "Exp4B predicted positives / matched Exp2 predicted positives; undefined if denominator is zero",
+  "depth_definition": "ROOT depth0; root-to-leaf path length counts edges; path_node_count is edges+1",
+  "pruning": false,
+  "threshold_tuning": false,
+  "peer_loss": false,
+  "hyperbolic": false,
+  "other_ablations": false,
+  "completion_marker": "EXPERIMENT_4B_MULTI_SEED_DIAGNOSTIC_COMPLETE"
+}
