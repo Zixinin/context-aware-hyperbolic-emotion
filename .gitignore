@@ -65,3 +65,5 @@ tmp/
 !.env.example
 *.pem
 *.key
+
+.venv-analysis/

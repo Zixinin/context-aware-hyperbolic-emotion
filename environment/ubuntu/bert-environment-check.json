@@ -1,0 +1,17 @@
+{
+  "model": "bert",
+  "status": "PACKAGES_READY_GPU_BLOCKED",
+  "python": "3.10.18",
+  "executable": "/home/zixinfeng/Documents/context-aware-hyperbolic-emotion/.venv-bert/bin/python",
+  "packages": {
+    "torch": "2.6.0+cu118",
+    "transformers": "4.51.3",
+    "datasets": "3.5.0"
+  },
+  "cuda_runtime": "11.8",
+  "gpu_probe_passed": false,
+  "training_entrypoint_ready": false,
+  "training_entrypoint_note": "Existing HPC paths/Slurm guards still require a separate Ubuntu launcher adaptation.",
+  "nvidia_smi": "Failed to initialize NVML: Driver/library version mismatch\nNVML library version: 595.84\n",
+  "gpu_error": "Traceback (most recent call last):\n  File \"/home/zixinfeng/Documents/context-aware-hyperbolic-emotion/environment/ubuntu/probe_environment.py\", line 61, in <module>\n    assert result.returncode==0,report['nvidia_smi']\nAssertionError: Failed to initialize NVML: Driver/library version mismatch\nNVML library version: 595.84\n\n"
+}

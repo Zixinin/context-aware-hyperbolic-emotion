@@ -1,0 +1,14 @@
+{
+  "status": "INDEPENDENT_ANALYSIS_ONLY_DELIVERY",
+  "ubuntu_execution_status": "NOT_RUN",
+  "expected_ubuntu_head": "c87d5ccd0689c2c032f3a7126127bb0a54aabe78",
+  "source_sha256": {
+    "analysis.py": "8e34a7c3088278ba85dc64c7c7911bf33cb4ebdaab3997bb4da6543f52952a27",
+    "probe.py": "049b8f1ed82bb8d95893bb8f0eaa9c7542b892280bc917456209f515c2b3bc75",
+    "report.py": "77be5fddad799ba0957057c57cfdff1b00b7cb247992ddc6353f13ea6505c8a2",
+    "run.py": "a0dea33a7a1b56e419275d7302bd360d62a390efaadc10107499273463d05732",
+    "test_diagnostics.py": "d5ede0edb783026c422eb818d9a45856de0ad1be78ef1f286e3f826f543369a7",
+    "LOCAL_VALIDATION.md": "f097e8fcb7f993c48ecd9f75182f35d133e3aba1b1dff0b513023ea0c8076cb4",
+    "README.md": "8934c76c756cd653088288e33537b4fc4174aa072a37469b855b562d63558b9d"
+  }
+}

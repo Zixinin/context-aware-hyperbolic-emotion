@@ -1,0 +1,16 @@
+{
+  "scope": "synthetic code QA only; no research dataset analysis executed on Mac",
+  "test_command": "python3 -m unittest -v test_exp4a.py",
+  "expected_tests": 7,
+  "completed_tests": 7,
+  "status": "PASSED",
+  "python": "3.12.3 (v3.12.3:f6650f9ad7, Apr  9 2024, 08:18:47) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "versions": {
+    "numpy": "1.26.4",
+    "scipy": "1.15.2",
+    "sklearn": "1.5.1",
+    "matplotlib": "3.10.1"
+  },
+  "includes": "full synthetic pipeline with 43410 rows, 200 bootstrap replicates, all reports/figures and saved artifact revalidation",
+  "scientific_results": false
+}
