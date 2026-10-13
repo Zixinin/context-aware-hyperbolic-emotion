@@ -1,0 +1,17 @@
+{
+  "experiment": "Original sentiment-hierarchy LGSA Exp2 Ubuntu rerun",
+  "seeds": [42, 123, 2026],
+  "text_window": 50,
+  "total_input_length": 54,
+  "auxiliary_nodes": 32,
+  "depths": 2,
+  "threshold": 0.30,
+  "rerun_bert": false,
+  "rerun_exp4b": false,
+  "hyperparameter_tuning": false,
+  "training_ast_changes": 0,
+  "std_ddof": 1,
+  "reuse_completed_seed42": "Exp4B only; all three Exp2 seeds retrained",
+  "comparison": "Ubuntu Exp2 vs existing Ubuntu Exp4B, matched seeds; historical HPC comparison retained",
+  "completion_marker": "EXP2_UBUNTU_RERUN_AND_EXP4B_COMPARISON_COMPLETE"
+}
