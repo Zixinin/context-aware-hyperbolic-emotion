@@ -1,0 +1,10 @@
+{
+  "saved_train_cache_positions_checked": 320,
+  "cache_models": "A1S fresh initialization and trained best",
+  "independent_Exp6D_candidate_formula_match": true,
+  "new_GPU_model_training": false,
+  "unit_tests_run": 8,
+  "unit_tests_passed": true,
+  "actual_Ubuntu_smoke": false,
+  "formal_training_started": false
+}

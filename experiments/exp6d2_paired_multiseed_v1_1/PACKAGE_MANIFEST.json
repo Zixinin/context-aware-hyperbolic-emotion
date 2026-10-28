@@ -1,0 +1,12 @@
+{
+  "FROZEN_SOURCE_REFERENCE.json": "173aaaa709a4d31927ff5a8883617a63f7a1ce8f6394ab9e6f29d18148a59bd7",
+  "LOCAL_QA.json": "cabe4aac1fddc17f6a6518a75f68e56f370b3f2ca16a64aa6ca73e1eb98ff725",
+  "PROTOCOL_CN.md": "0d9dde37bbf43207db8fc51f63991ed4b200bdc36af880ed8ac6d4e02a18e254",
+  "RECOVERY_REFERENCE.json": "e989f04b09bd567960ac3acba9d0f392d9a096c7773855bb17151228bb7caaf4",
+  "launch.sh": "c97a76fa20da0f5328e67579f4e03b87aed9f807da4572d8be7e8a86b70af6d9",
+  "pcommon.py": "b3c8d687857308951f44905cd1ccd9b3ba8188a75bd04cdb6692008ab756df6f",
+  "preport.py": "c7274be37e505ab353d0975d8762b2c3e93362daf0428049fba6b0a657c03127",
+  "psuite.py": "587cd4b863ccb69bff68422ccf0397b432cb26a21c3c21f57905aa21b28fc787",
+  "ptrain.py": "28a18e513cecf16bd1f403cc6ab79c5c26eaab51edb69067a71f6151b1aea488",
+  "tests_local.py": "15ce7c2c91bce70027b07bc53da8b4bae85afe1a7a0fe0ce0c384d896a89fc10"
+}

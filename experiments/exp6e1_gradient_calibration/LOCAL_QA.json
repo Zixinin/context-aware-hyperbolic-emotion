@@ -1,0 +1,31 @@
+{
+  "status": "LOCAL_CPU_TESTS_PASS_UBUNTU_CALIBRATION_NOT_ATTEMPTED",
+  "tests": 16,
+  "checks": {
+    "unit_tests": {
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "-X",
+        "utf8",
+        "/Users/fengzixin/Desktop/PSP303-FYP/context-aware-hyperbolic-emotion/experiments/exp6e1_gradient_calibration/tests_local.py"
+      ],
+      "exit_code": 0,
+      "log_sha256": "8ac6b0f6b67c6f30b07a182f2a7e0fef87e052ef1a6e40fb4892984c6dce7f45"
+    },
+    "bash_parse": {
+      "command": [
+        "bash",
+        "-n",
+        "/Users/fengzixin/Desktop/PSP303-FYP/context-aware-hyperbolic-emotion/experiments/exp6e1_gradient_calibration/launch.sh"
+      ],
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "existing_frozen_source_directories_unchanged": 6,
+  "real_full_precision_gradient_csv": "ON_UBUNTU_NOT_READ_LOCALLY",
+  "formal_gamma_G": null,
+  "no_model_execution": true,
+  "no_training": true,
+  "no_Test": true
+}

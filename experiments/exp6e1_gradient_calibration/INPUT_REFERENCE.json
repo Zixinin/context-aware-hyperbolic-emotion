@@ -1,0 +1,73 @@
+{
+  "geodesic_source_files": {
+    "FROZEN_SOURCES.json": "f2bb5f16c9329ff5f3137c1be45433e99052f3dc559434c6b91064b52fa0f74f",
+    "LOCAL_QA.json": "ca08fe31baac7d19d2fc4f102a13340d6d3f9a541637e14ae612a08f6cdf856e",
+    "PACKAGE_MANIFEST.json": "6e08375d6d9e49ce86c3e7f82bb38720339d7111583f52a27037345741a85545",
+    "PROTOCOL_CN.md": "b9a75f66cfd9bbc59e1485c612734bc8c83f2278bffddc4d2061ef1e62a86723",
+    "gaudit.py": "d15df6eed8cb136ae4fd9cb317d82ebaa0f790db4d60102b8271a401565384f9",
+    "gcommon.py": "fe9ef6c8a9b265b22c33dc49f204e6b3b3c9b1598d924742f7838e83e1a4ebba",
+    "gmath.py": "8b9eb76efb092e0b98fd3ba6a8981b88c5c01fd5910dc1cf5eebb8770385a533",
+    "gmodel.py": "5e36fba5610f87b1b2b63569781f29ab45db1b7646686f2c03902822e075728c",
+    "gprobe.py": "180d6de25a64ce5b08914dd6f6317ec0a533477aa82ea1975d1778855d91c52f",
+    "greport.py": "04c100c67714e69338ab8ec5a4e7eef63ff893dfbf6020a6849b15c9425709d2",
+    "grun.py": "490da69fb8e4819cb5608d6f547eb112b7b54dea0ce93dac422ed78a1ccb8027",
+    "launch.sh": "ac514c91ea1dad2a49a2e8066ef9a299e82068253133fde9f20526b910d342e7",
+    "tests_local.py": "5f4124f474ec2b86bc504295530043ffb4766803412b69b5258053196c20f24e"
+  },
+  "reviewed_terminal_sha256": "6418cdd0afe5e62ad8755aa768575a607bb346d8d7a8626fad9856e242449322",
+  "input_run": "/home/zixinfeng/Documents/context-aware-hyperbolic-emotion/results/exp6e_geodesic_alignment/run_20261027T115121Z_clE7F1kT",
+  "fresh_printed_reference": {
+    "single_positive": {
+      "coordinate_aux_norm": 0.106065,
+      "geodesic_aux_norm": 1.150477,
+      "bce_geodesic_aux_cosine": 0.030078
+    },
+    "multi_positive": {
+      "coordinate_aux_norm": 0.096699,
+      "geodesic_aux_norm": 1.14444,
+      "bce_geodesic_aux_cosine": 0.053995
+    },
+    "common_top7_train": {
+      "coordinate_aux_norm": 0.126359,
+      "geodesic_aux_norm": 1.142582,
+      "bce_geodesic_aux_cosine": 0.030808
+    },
+    "rare_grief": {
+      "coordinate_aux_norm": 0.255042,
+      "geodesic_aux_norm": 1.236814,
+      "bce_geodesic_aux_cosine": 0.03149
+    },
+    "rare_pride": {
+      "coordinate_aux_norm": 0.265167,
+      "geodesic_aux_norm": 1.183292,
+      "bce_geodesic_aux_cosine": 0.044206
+    },
+    "rare_relief": {
+      "coordinate_aux_norm": 0.239573,
+      "geodesic_aux_norm": 1.202205,
+      "bce_geodesic_aux_cosine": 0.079054
+    },
+    "rare_nervousness": {
+      "coordinate_aux_norm": 0.261708,
+      "geodesic_aux_norm": 1.190903,
+      "bce_geodesic_aux_cosine": 0.041559
+    },
+    "rare_embarrassment": {
+      "coordinate_aux_norm": 0.301987,
+      "geodesic_aux_norm": 1.152012,
+      "bce_geodesic_aux_cosine": 0.039266
+    },
+    "rare_remorse": {
+      "coordinate_aux_norm": 0.250994,
+      "geodesic_aux_norm": 1.183148,
+      "bce_geodesic_aux_cosine": 0.020984
+    },
+    "rare_fear": {
+      "coordinate_aux_norm": 0.30241,
+      "geodesic_aux_norm": 1.255314,
+      "bce_geodesic_aux_cosine": -0.061401
+    }
+  },
+  "A1_success_sha256": "fd37cf32760e67ad9826b4fb1811e623e27b2ced78c184985aeb563944e13337",
+  "train_tsv_sha256": "1c254a142be5c00e80d819b9ae1bbd36d94b2eeb8f4b1271846508d57e57d9c5"
+}

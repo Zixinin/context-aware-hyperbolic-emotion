@@ -1,0 +1,23 @@
+{
+  "threshold": 0.3,
+  "num_examples": 3834,
+  "micro_precision": 0.6236859043123794,
+  "micro_recall": 0.6300390117035111,
+  "micro_f1": 0.6268463611859838,
+  "macro_precision": 0.5636031657515266,
+  "macro_recall": 0.531647650537529,
+  "macro_f1": 0.5336803898992779,
+  "weighted_precision": 0.6244800132348596,
+  "weighted_recall": 0.6300390117035111,
+  "weighted_f1": 0.6147261554170915,
+  "rare_f1": 0.39921889650353765,
+  "total_predicted_positives": 4661,
+  "total_gold_positives": 4614,
+  "mean_predictions_per_example": 1.2157016171100679,
+  "mean_gold_positives_per_example": 1.203442931175232,
+  "zero_prediction_examples": 151,
+  "zero_prediction_labels": [
+    "grief",
+    "relief"
+  ]
+}

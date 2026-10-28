@@ -1,0 +1,63 @@
+{
+  "created": "2026-10-27T11:51:56.962489+00:00",
+  "experiment": "Geodesic Alignment Ablation",
+  "variant": "A1-G",
+  "seed": 42,
+  "source_sha256": {
+    "gaudit.py": "d15df6eed8cb136ae4fd9cb317d82ebaa0f790db4d60102b8271a401565384f9",
+    "grun.py": "490da69fb8e4819cb5608d6f547eb112b7b54dea0ce93dac422ed78a1ccb8027",
+    "gcommon.py": "fe9ef6c8a9b265b22c33dc49f204e6b3b3c9b1598d924742f7838e83e1a4ebba",
+    "tests_local.py": "5f4124f474ec2b86bc504295530043ffb4766803412b69b5258053196c20f24e",
+    "PROTOCOL_CN.md": "b9a75f66cfd9bbc59e1485c612734bc8c83f2278bffddc4d2061ef1e62a86723",
+    "gmodel.py": "5e36fba5610f87b1b2b63569781f29ab45db1b7646686f2c03902822e075728c",
+    "launch.sh": "ac514c91ea1dad2a49a2e8066ef9a299e82068253133fde9f20526b910d342e7",
+    "FROZEN_SOURCES.json": "f2bb5f16c9329ff5f3137c1be45433e99052f3dc559434c6b91064b52fa0f74f",
+    "greport.py": "04c100c67714e69338ab8ec5a4e7eef63ff893dfbf6020a6849b15c9425709d2",
+    "LOCAL_QA.json": "ca08fe31baac7d19d2fc4f102a13340d6d3f9a541637e14ae612a08f6cdf856e",
+    "gmath.py": "8b9eb76efb092e0b98fd3ba6a8981b88c5c01fd5910dc1cf5eebb8770385a533",
+    "gprobe.py": "180d6de25a64ce5b08914dd6f6317ec0a533477aa82ea1975d1778855d91c52f"
+  },
+  "snapshot": "/home/zixinfeng/Documents/HypEmo-Reproduction/environment/huggingface/hub/models--roberta-base/snapshots/e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+  "snapshot_sha256": {
+    "config.json": "ef0185e2aae6e06c5f105a285006952c340e20c7dbf43c86ec82601b13fc45e9",
+    "merges.txt": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+    "model.safetensors": "5bde1d28afb363d0103324efeb5afc8b2b397fe5e04beabb9b1ef355255ade81",
+    "tokenizer.json": "847bbeab6174d66a88898f729d52fa8d355fafe1bea101cf960dd404581df70e",
+    "tokenizer_config.json": "994f46754c5bf4014f1aa92d34b1374319c3a6b3f702105cd5b742beaecd18ce",
+    "vocab.json": "9e7f63c2d15d666b52e21d250d2e513b87c9b713cfa6987a82ed89e5e6e50655"
+  },
+  "runtime": {
+    "host": "D3020-A3",
+    "python": "3.10.18 (main, Sep 18 2025, 19:50:32) [Clang 20.1.4 ]",
+    "executable": "/home/zixinfeng/Documents/context-aware-hyperbolic-emotion/.venv-bert/bin/python",
+    "packages": {
+      "torch": "2.6.0+cu118",
+      "transformers": "4.51.3",
+      "numpy": "1.26.4",
+      "scikit-learn": "1.6.1",
+      "tokenizers": "0.21.1",
+      "safetensors": "0.5.3"
+    },
+    "pip_freeze": "accelerate==1.6.0\naiohappyeyeballs==2.7.1\naiohttp==3.14.4\naiosignal==1.4.0\nasync-timeout==5.0.1\nattrs==26.1.0\ncertifi==2026.7.22\ncharset-normalizer==3.5.2\ncloudpickle==3.1.2\ncontourpy==1.3.2\ncycler==0.12.1\ndatasets==3.5.0\ndill==0.3.8\nfilelock==3.32.3\nfonttools==4.65.0\nfrozenlist==1.8.0\nfsspec==2024.12.0\nhuggingface-hub==0.30.2\nidna==3.20\nJinja2==3.1.6\njoblib==1.6.0\nkiwisolver==1.5.1\nMarkupSafe==3.0.3\nmatplotlib==3.9.4\nmpmath==1.3.0\nmultidict==6.9.1\nmultiprocess==0.70.16\nnetworkx==3.4.2\nnumpy==1.26.4\nnvidia-cublas-cu11==11.11.3.6\nnvidia-cuda-cupti-cu11==11.8.87\nnvidia-cuda-nvrtc-cu11==11.8.89\nnvidia-cuda-runtime-cu11==11.8.89\nnvidia-cudnn-cu11==9.1.0.70\nnvidia-cufft-cu11==10.9.0.58\nnvidia-curand-cu11==10.3.0.86\nnvidia-cusolver-cu11==11.4.1.48\nnvidia-cusparse-cu11==11.7.5.86\nnvidia-nccl-cu11==2.21.5\nnvidia-nvtx-cu11==11.8.86\npackaging==26.3\npandas==2.2.3\npillow==12.3.0\npropcache==0.5.4\npsutil==7.2.2\npyarrow==19.0.1\npyparsing==3.3.3\npython-dateutil==2.9.0.post0\npytz==2026.5\nPyYAML==6.0.3\nregex==2026.9.29\nrequests==2.34.2\nsafetensors==0.5.3\nscikit-learn==1.6.1\nscipy==1.15.3\nsix==1.17.0\nsympy==1.13.1\nthreadpoolctl==3.7.0\ntokenizers==0.21.1\ntorch==2.6.0+cu118\ntqdm==4.67.1\ntransformers==4.51.3\ntriton==3.2.0\ntyping_extensions==4.16.0\ntzdata==2026.5\nurllib3==2.8.0\nxxhash==4.0.1\nyarl==1.25.1",
+    "gpu": "NVIDIA GeForce RTX 4090 D",
+    "cuda_runtime": "11.8",
+    "nvidia_smi": "Tue Oct 27 19:51:24 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 595.99.02              Driver Version: 595.99.02      CUDA Version: 13.2     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 4090 D      Off |   00000000:01:00.0 Off |                  Off |\n|  0%   45C    P8             14W /  425W |      18MiB /  24564MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A            3176      G   /usr/lib/xorg/Xorg                        4MiB |\n+-----------------------------------------------------------------------------------------+",
+    "git_commit": "0086aae76dd5dc159afb89012d36dfad48e2f402",
+    "git_status": "?? Exp5A_cls_mean_multiseed.zip.sha256\n?? Exp5A_code.zip.sha256\n?? Exp5A_control_code.zip.sha256\n?? Exp5_CLS_error_analysis_code.zip.sha256\n?? experiments/exp5_cls_error_analysis/\n?? experiments/exp5a_controls/\n?? experiments/exp5a_controls_multiseed/\n?? experiments/exp6c0_roberta27_baseline/\n?? experiments/exp6c1_roberta27_hypaux/\n?? experiments/exp6c1s_scaled_train/\n?? experiments/exp6d1_normalized_distance_bce/\n?? experiments/exp6d2_paired_multiseed/\n?? experiments/exp6d2_paired_multiseed_v1_1/\n?? experiments/exp6e_geodesic_alignment/\n?? results/",
+    "env": {
+      "PYTHONHASHSEED": "42",
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+      "CUDA_VISIBLE_DEVICES": "0",
+      "HF_HUB_OFFLINE": "1"
+    }
+  },
+  "config_sha256": "55550a2e20f1778a9f38ab50f80187151fb4fd68c255ad5830e168a299692522",
+  "data_sha256": "f3b3a93418bcd4d26d7b53a440c89ef8f25e4e76d5e25bb1e7fbb13e3d92b953",
+  "new_training_runs": 1,
+  "new_test_calls": 0,
+  "severe_ratio_gate": 10.0,
+  "comparison": "Validation seed42 A0/A1/A1-G",
+  "blocked_on_smoke": true,
+  "leakage_evidence_limit": "INCONCLUSIVE: exact original release training command/log not available",
+  "no_explicit_example_leakage_found": true
+}

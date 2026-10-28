@@ -1,0 +1,55 @@
+{
+  "status": "MAC_CPU_QA_PASS_UBUNTU_EXECUTION_PENDING",
+  "created": "2026-10-23T05:47:24.682160+00:00",
+  "python": "3.12.3 (v3.12.3:f6650f9ad7, Apr  9 2024, 08:18:47) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "paired_contract_tests": 13,
+  "frozen_n1_contract_tests": 8,
+  "checks": [
+    {
+      "name": "paired_contracts",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "-X",
+        "utf8",
+        "/Users/fengzixin/Desktop/PSP303-FYP/context-aware-hyperbolic-emotion/experiments/exp6d2_paired_multiseed/tests_local.py"
+      ],
+      "exit_code": 0,
+      "log_sha256": "7abca6db0af15f994b3c99c592710d49d1ad9227be2e6a0d9fa4a4ca89bc8ef1"
+    },
+    {
+      "name": "frozen_n1_loss_contracts",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "experiments/exp6d1_normalized_distance_bce",
+        "-p",
+        "tests_local.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log_sha256": "35a06340f513d97b217be604f7f8d0a725326a183c8f8d6acc356516aa83f1f9"
+    },
+    {
+      "name": "launch_shell_parse",
+      "command": [
+        "bash",
+        "-n",
+        "/Users/fengzixin/Desktop/PSP303-FYP/context-aware-hyperbolic-emotion/experiments/exp6d2_paired_multiseed/launch.sh"
+      ],
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "archived_seed42_order_replayed": "30587 A1-S train IDs, all4 epochs; Ubuntu will check A0/A1S/N1 archives",
+  "real_RoBERTa_initialization_smoke": "PENDING_UBUNTU",
+  "new_GPU_training": "NOT_STARTED",
+  "new_Test_inference": 0,
+  "source_syntax": "all new Python modules parsed",
+  "scientific_results_generated": false
+}

@@ -1,0 +1,46 @@
+{
+  "status": "LOCAL_SYNTHETIC_CPU_CHECKS_PASSED",
+  "local_tests": 14,
+  "log_sha256": "57d47f9407e55ec2d36385ef710f1685b7df8f05f9836c175259a290c701f5c1",
+  "python310_AST": true,
+  "bash_syntax": true,
+  "old_A0_A1_source_manifests_unchanged": true,
+  "old_source_hashes": {
+    "a1": {
+      "A0_SOURCE_REFERENCE.json": "7399bf8788694ac53d8f3d94009cc4326072ac345c6a80dfad7651a65081ecc2",
+      "EXP6B_REFERENCE.json": "b04bf2d0149e8a81c2be422bd45f97c49979a77c7a4c23c955859216884c9ff9",
+      "LOSS_SPECIFICATION.md": "a0b3203db09d611bfd67bfbea85077088c2ce21062abf358a84617d12ec19a31",
+      "README_CN.md": "9c98f6b1f54b217ae2c41706e65ef650f0a49f8c23c5c8ae26f7d95d26abc492",
+      "UPSTREAM_REFERENCE.json": "662ac180e62d3bd2f514a93bd07bc5e44281f5fc056a9ec3b69f80ff0edaf859",
+      "a1lib.py": "8bd575e9533aeb3310c19551a9b5add300798a896550fed8e140f479fecf0fef",
+      "a1model.py": "fa3469aa2d28638942ec53cfc61a43caea5a6c8ef7e3628c8a144a733a9474fb",
+      "a1run.py": "1ed667cfc789bad04bab414af4d4e69f8b034ed69269b90a8428c1666daf1a68",
+      "collect_review.py": "52e3a8a6112355fb8ea60adebf80794f0e3837220ba744798decc05bbb2af56e",
+      "inspect_a1.py": "057cbdfd6f23bd52fbd4f21c0234e78f94744e9003e2b91bcf64c9a7165031c3",
+      "launch.sh": "303df00d92dcbf7b3241e05d76f739f8b5e59a9b481a04d948e4970c0a1a5162",
+      "tests_a1.py": "8fceb7caba8f190e9c3ca2e3e8d680b030402dd6cfb9cb0c713b1d82f738236d"
+    },
+    "a0": {
+      "launch.sh": "97f5d08e3550f609694e5eeea12bce1c610194228fbd4785e070e174289acdbc",
+      "run.py": "2cbe287e1c16a867c905030853dba280efb25174a08c436442a87a834dcc8843",
+      "PACKAGE_MANIFEST.sha256": "bf142be8998db4dba710c82b599136dc5ff5d279814ddb44ca5b18dcd935365c",
+      "model27.py": "0a2553f59244543da81c61f813226a444e3a9066b49980f86d0608584fa2f8c5",
+      "metrics27.py": "6f4d9fbc18cf8f9f199111a031dcc855356a7cc9c14278e9d7fb56ec8c426244",
+      "INPUT_PROVENANCE.json": "3cd26b9fdebeefbdace44a78a56d804147fcc12eec372dcfa62fe828cfedd10d",
+      "inspect_ubuntu.py": "9a88fa859231af928787a731ad7e21f42e14739287e53eb120e992a7819d875a",
+      "README_CN.md": "18c0f464498ff6f8f504adeb87bdfa00a48eee5147f527567c3de14518e75133",
+      "common.py": "b2ec8d346cba1e1c3c7a4fbcece9e0ebd5565b9e3c0b0e227d29e7d5758f1aca",
+      "USER_EXPERIMENT_PROMPT.md": "c31e6b8e729dcb9ab548c0983b9ec6e103754551fafb08b99a895a5f24e5e88d",
+      "IMPLEMENTATION_AUDIT.md": "dee3560bc3f2aff0db747480c9e1a2f012ad1f09fbb009afcbbd5791cf2b2ca4",
+      "collect_review.py": "f863c021e2cbdafca16dd2dff80893dc28c8881bc007010f7db06646fc983e20",
+      "data27.py": "e3f28b0dd4fc1f120c06467885459e80d167c5636a9ba572000d2a9c9dcc7b93",
+      "protocol_reference.json": "00b603d134e387a5dafe83a29fdd9aa8101ab2b83da85f7fb5e18dd24bddda65",
+      "tests.py": "f10c0eae5a77e679b2f1bbb862456c1927f6d9a3edeacd303dc4488f2de123e0"
+    }
+  },
+  "actual_Ubuntu_smoke": "NOT_ATTEMPTED",
+  "formal_training": "NOT_ATTEMPTED",
+  "new_Test_inference": 0,
+  "source_fixtures": "Pinned original HNN class AST with torch tanh/artanh CPU stand-ins; real runtime uses complete original upstream helpers.",
+  "user_prompt_sha256": "c84d931ebe91cc8c5973400461cb55d72592bea5a5a1c8fed3114b74df87c044"
+}

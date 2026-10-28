@@ -1,0 +1,23 @@
+test_actual_probe_keeps_parameters_gradients_modes_and_scale (__main__.ScaledTests.test_actual_probe_keeps_parameters_gradients_modes_and_scale) ... /Users/fengzixin/Desktop/PSP303-FYP/context-aware-hyperbolic-emotion/results/exp6c1s_input_scaling_diagnostics/run_20261021T133415Z_3VyOQEzH/source_review/manifolds__poincare.py:101: UserWarning: where received a uint8 condition tensor. This behavior is deprecated and will be removed in a future version of PyTorch. Use a boolean condition instead. (Triggered internally at /Users/runner/work/pytorch/pytorch/pytorch/aten/src/ATen/native/TensorCompare.cpp:529.)
+  res = torch.where(cond, res_0, res_c)
+GEOMETRY fixture {'tag': 'fixture', 'unique_ids': 16, 'cohort_positions': 16, 'first_clip_fraction': 0.0, 'later_clip_fraction': 0.0, 'final_fraction_above_099': 0.0, 'final_mean_norm': 0.1571149379014969, 'final_min_norm': 0.1571149379014969, 'final_max_norm': 0.1571149379014969, 'final_norm_std': 0.0, 'final_norm_IQR': 0.0, 'median_shared_aux_to_BCE_gradient_norm': 0.024149360098809535, 'median_shared_gradient_cosine': 0.14313385361375514}
+ok
+test_complete_UTF8_report_writes_f1_AP_geometry_and_negative_result (__main__.ScaledTests.test_complete_UTF8_report_writes_f1_AP_geometry_and_negative_result) ... ok
+test_fixed_threshold_AP_ties_and_gold_positive_probability (__main__.ScaledTests.test_fixed_threshold_AP_ties_and_gold_positive_probability) ... ok
+test_formula_multi_positive_reduction_and_gradient_paths (__main__.ScaledTests.test_formula_multi_positive_reduction_and_gradient_paths) ... ok
+test_no_test_training_path_and_frozen_dependencies (__main__.ScaledTests.test_no_test_training_path_and_frozen_dependencies) ... ok
+test_only_aux_input_scaled_once_parameter_keys_and_rng_preserved (__main__.ScaledTests.test_only_aux_input_scaled_once_parameter_keys_and_rng_preserved) ... ok
+test_original_saved_validation_values_recompute_on_CPU (__main__.ScaledTests.test_original_saved_validation_values_recompute_on_CPU) ... ok
+test_parameter_groups_identical_and_original_train_step_works (__main__.ScaledTests.test_parameter_groups_identical_and_original_train_step_works) ... ok
+test_probe_restores_all_RNG_and_mixed_module_modes_even_on_error (__main__.ScaledTests.test_probe_restores_all_RNG_and_mixed_module_modes_even_on_error) ... ok
+test_reloaded_scaled_state_preserves_exact_logits (__main__.ScaledTests.test_reloaded_scaled_state_preserves_exact_logits) ... ok
+test_review_export_preserves_sealed_files_and_declares_missing_checkpoint (__main__.ScaledTests.test_review_export_preserves_sealed_files_and_declares_missing_checkpoint) ... ok
+test_smoke_seal_rejects_artifact_tampering (__main__.ScaledTests.test_smoke_seal_rejects_artifact_tampering) ... EXP6C1S_SAVED_SMOKE_VERIFICATION_PASS
+ok
+test_strict_macro_selection_preserves_earliest_tie (__main__.ScaledTests.test_strict_macro_selection_preserves_earliest_tie) ... ok
+test_training_logits_and_random_draw_consumption_match_unscaled (__main__.ScaledTests.test_training_logits_and_random_draw_consumption_match_unscaled) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 2.336s
+
+OK

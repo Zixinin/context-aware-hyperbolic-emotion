@@ -1,0 +1,13 @@
+{
+  "status": "CALIBRATED_GEODESIC_SMOKE_PASS",
+  "plan_sha256": "f120532481c08b57e51e961be1f40858bf475a38080473a11a64ed7ebd81ac48",
+  "smoke_artifacts_sha256": {
+    "SMOKE.json": "be4b0db9b6a7e3abfa46163e8cc6787ff938930709c716c36338f5f921295528",
+    "discarded_weights.pt": "51d13c7a197920662b65c7080586a7100e2a0178cdabb4f89a4ef36b87ce89ca"
+  },
+  "pretraining_probe_tags": [
+    "fresh_initial"
+  ],
+  "calibration_replay_sha256": "7dc4fd64a702569c9c292e6a445b2f9e55432af7737d00bb070d48de4f7e8704",
+  "completed": "2026-10-28T08:34:58.011916+00:00"
+}

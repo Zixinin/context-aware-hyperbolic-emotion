@@ -1,0 +1,214 @@
+{
+  "validation": {
+    "definition": "unweighted mean per-label F1 over fixed seven labels",
+    "labels": [
+      "grief",
+      "pride",
+      "relief",
+      "nervousness",
+      "embarrassment",
+      "remorse",
+      "fear"
+    ],
+    "rare_f1": 0.5502480619106142,
+    "per_label": [
+      {
+        "label_id": 16,
+        "label": "grief",
+        "support": 13,
+        "tp": 6,
+        "fp": 2,
+        "fn": 7,
+        "precision": 0.75,
+        "recall": 0.46153846153846156,
+        "f1": 0.5714285714285714,
+        "predicted_positive_count": 8,
+        "true_positive_count": 13
+      },
+      {
+        "label_id": 21,
+        "label": "pride",
+        "support": 15,
+        "tp": 8,
+        "fp": 4,
+        "fn": 7,
+        "precision": 0.6666666666666666,
+        "recall": 0.5333333333333333,
+        "f1": 0.5925925925925926,
+        "predicted_positive_count": 12,
+        "true_positive_count": 15
+      },
+      {
+        "label_id": 23,
+        "label": "relief",
+        "support": 18,
+        "tp": 3,
+        "fp": 6,
+        "fn": 15,
+        "precision": 0.3333333333333333,
+        "recall": 0.16666666666666666,
+        "f1": 0.2222222222222222,
+        "predicted_positive_count": 9,
+        "true_positive_count": 18
+      },
+      {
+        "label_id": 19,
+        "label": "nervousness",
+        "support": 21,
+        "tp": 8,
+        "fp": 12,
+        "fn": 13,
+        "precision": 0.4,
+        "recall": 0.38095238095238093,
+        "f1": 0.3902439024390244,
+        "predicted_positive_count": 20,
+        "true_positive_count": 21
+      },
+      {
+        "label_id": 12,
+        "label": "embarrassment",
+        "support": 35,
+        "tp": 21,
+        "fp": 15,
+        "fn": 14,
+        "precision": 0.5833333333333334,
+        "recall": 0.6,
+        "f1": 0.5915492957746479,
+        "predicted_positive_count": 36,
+        "true_positive_count": 35
+      },
+      {
+        "label_id": 24,
+        "label": "remorse",
+        "support": 68,
+        "tp": 62,
+        "fp": 31,
+        "fn": 6,
+        "precision": 0.6666666666666666,
+        "recall": 0.9117647058823529,
+        "f1": 0.7701863354037267,
+        "predicted_positive_count": 93,
+        "true_positive_count": 68
+      },
+      {
+        "label_id": 14,
+        "label": "fear",
+        "support": 90,
+        "tp": 66,
+        "fp": 29,
+        "fn": 24,
+        "precision": 0.6947368421052632,
+        "recall": 0.7333333333333333,
+        "f1": 0.7135135135135136,
+        "predicted_positive_count": 95,
+        "true_positive_count": 90
+      }
+    ]
+  },
+  "test": {
+    "definition": "unweighted mean per-label F1 over fixed seven labels",
+    "labels": [
+      "grief",
+      "pride",
+      "relief",
+      "nervousness",
+      "embarrassment",
+      "remorse",
+      "fear"
+    ],
+    "rare_f1": 0.5331602171451796,
+    "per_label": [
+      {
+        "label_id": 16,
+        "label": "grief",
+        "support": 6,
+        "tp": 3,
+        "fp": 1,
+        "fn": 3,
+        "precision": 0.75,
+        "recall": 0.5,
+        "f1": 0.6,
+        "predicted_positive_count": 4,
+        "true_positive_count": 6
+      },
+      {
+        "label_id": 21,
+        "label": "pride",
+        "support": 16,
+        "tp": 6,
+        "fp": 3,
+        "fn": 10,
+        "precision": 0.6666666666666666,
+        "recall": 0.375,
+        "f1": 0.48,
+        "predicted_positive_count": 9,
+        "true_positive_count": 16
+      },
+      {
+        "label_id": 23,
+        "label": "relief",
+        "support": 11,
+        "tp": 3,
+        "fp": 5,
+        "fn": 8,
+        "precision": 0.375,
+        "recall": 0.2727272727272727,
+        "f1": 0.3157894736842105,
+        "predicted_positive_count": 8,
+        "true_positive_count": 11
+      },
+      {
+        "label_id": 19,
+        "label": "nervousness",
+        "support": 23,
+        "tp": 9,
+        "fp": 8,
+        "fn": 14,
+        "precision": 0.5294117647058824,
+        "recall": 0.391304347826087,
+        "f1": 0.45,
+        "predicted_positive_count": 17,
+        "true_positive_count": 23
+      },
+      {
+        "label_id": 12,
+        "label": "embarrassment",
+        "support": 37,
+        "tp": 18,
+        "fp": 19,
+        "fn": 19,
+        "precision": 0.4864864864864865,
+        "recall": 0.4864864864864865,
+        "f1": 0.4864864864864865,
+        "predicted_positive_count": 37,
+        "true_positive_count": 37
+      },
+      {
+        "label_id": 24,
+        "label": "remorse",
+        "support": 56,
+        "tp": 52,
+        "fp": 40,
+        "fn": 4,
+        "precision": 0.5652173913043478,
+        "recall": 0.9285714285714286,
+        "f1": 0.7027027027027027,
+        "predicted_positive_count": 92,
+        "true_positive_count": 56
+      },
+      {
+        "label_id": 14,
+        "label": "fear",
+        "support": 78,
+        "tp": 61,
+        "fp": 36,
+        "fn": 17,
+        "precision": 0.6288659793814433,
+        "recall": 0.782051282051282,
+        "f1": 0.6971428571428572,
+        "predicted_positive_count": 97,
+        "true_positive_count": 78
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "status": "EXP5_CLS_ERROR_ANALYSIS_COMPLETE_VERIFIED",
+  "completed_at": "2026-10-18T01:45:25.272363+00:00",
+  "artifact_sha256": {
+    "label_summary.csv": "bb99a8b613596cff1b64ddb447f2625967eb521027483764024159d8a3052cde",
+    "rare_group_metrics.csv": "4f7d0331cf6576c02b4e1e780b939e0e1918daf36847eab9ab23cdad0c81dc10",
+    "PROTECTED_INPUTS.json": "628fc7d0202e486b3a1e67aa17b5ae97c5934c89c4f8bac08ca472ffd99d1460",
+    "pair_patterns.csv": "c0a81af14ea78dbe74955be817005dde56ec1fb8a249ca2095aae75002d69f80",
+    "validation_probability_summary.csv": "d4f2795c342b67bf62f64d980dfbfcb2d6f76b0c96978ebb1d896a1f1b95dfa2",
+    "validation_pair_examples.csv": "5248bb80c89edacef435b40bad7604e453e81d9d2fc70ffb76bbdd1821bd3fa0",
+    "validation_BCE_proxy.csv": "2c62fb5365f796029fdd5b1e60cabb0bf6157cc49f234bd310a1ed2e6789e2fd",
+    "EXP5_CLS_ERROR_ANALYSIS.md": "7631286e78a1e39f47593ab28970974f26382d561f7f021d26d909981e9423d6",
+    "pair_overlap.csv": "5872fa70e94f85171968875cefaa15338aa7a4229a90f849d9a19d1ee6475264",
+    "label_metrics_by_seed.csv": "8f213c71bad222570b9fba73f603005d941ad3b79d6f19a3cdc0cc5d5502039d",
+    "INPUT_AUDIT.json": "2e61bcc8aab0e1c7ee8c859467bf8af37462144fb360f1e8669a2e3f75f26de7",
+    "validation_threshold_neighborhood.csv": "9ec53fbe47a950add78189b766ba7ce6ef06c7055cb5d077a88a9fbf474a3667",
+    "label_counts.csv": "2b77365d8e537a867b166cdc28ae8b1083b62069b1aa4ba7086ae4048b629296",
+    "validation_probability_bins.csv": "e206e754ca8bbc5569f5357c82861b2508d109e3a4f99c5fec953dcc33ce9473"
+  },
+  "protected_inputs_unchanged": true
+}

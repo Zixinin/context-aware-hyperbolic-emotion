@@ -1,0 +1,9 @@
+{
+  "smoke_directory": "/home/zixinfeng/Documents/HypEmo-Exp6B/stage_b/smoke_vYTTGsIO",
+  "smoke_success_sha256": "eac951766a8637b631a930f4b94e3d53b85fea06bd139c32199cdf8b87cf36ba",
+  "original_emotion_embeddings_sha256": "648b6ecec551df27b02b70d378f59e0a879d662ae0dd9413c857fbc89030a1db",
+  "approved_loss_source_sha256": "65d3ac49886319f334aadfa86a0d6f50b84764525c3af11ac51c55a80a213c8a",
+  "formula_id": "A_positive_mean_batch_mean_v1",
+  "source_commit": "97ec6af6b19b831f69cb35a82dc65ea1395fa157",
+  "source_vector_sha256": "2695b98e160e79c62533d6bee55fdbcfdbbcba87cbcde8ab6db2734dc16ab20a"
+}

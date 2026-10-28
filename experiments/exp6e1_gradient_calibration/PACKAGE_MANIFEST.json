@@ -1,0 +1,9 @@
+{
+  "INPUT_REFERENCE.json": "07e1255b7f52d44910511095c2c655bdf85921732512477b12031770ddffe311",
+  "LOCAL_QA.json": "556308789100a53219a60e84b244accfcbc34cc7fad1c0c0a3d4242f04d94f7b",
+  "PROTOCOL_CN.md": "e40bbe786e48f8c2d601533430b28e76ea55a8bfe857ba83cb4ba6ada23e2104",
+  "cal_math.py": "027f8bcec5be2d9ff5c5975f630cb3a2c399e2789ae50c9eabd6a90d0892cb64",
+  "calibrate.py": "9bf3a46964364a6dd7a333a8e08a9561f320c3f0e22026ded9626af0c769112b",
+  "launch.sh": "13bd31b461acc1aeaecbe75fb0e05263f651028f16c5334cab4218ca7f4e9c58",
+  "tests_local.py": "059599e510611b75cccdfdf8faf791d799ee60606a144ddf52cd71f4d31b22b1"
+}

@@ -1,0 +1,24 @@
+{
+  "threshold": 0.3,
+  "num_examples": 3834,
+  "micro_precision": 0.6394820536119945,
+  "micro_recall": 0.6100996965756393,
+  "micro_f1": 0.6244454303460515,
+  "macro_precision": 0.5506668819149811,
+  "macro_recall": 0.5129084848398391,
+  "macro_f1": 0.5228061335002839,
+  "weighted_precision": 0.629070571538297,
+  "weighted_recall": 0.6100996965756393,
+  "weighted_f1": 0.6121131622860543,
+  "rare_f1": 0.3598768046359698,
+  "total_predicted_positives": 4402,
+  "total_gold_positives": 4614,
+  "mean_predictions_per_example": 1.1481481481481481,
+  "mean_gold_positives_per_example": 1.203442931175232,
+  "zero_prediction_examples": 288,
+  "zero_prediction_labels": [
+    "grief",
+    "nervousness",
+    "relief"
+  ]
+}

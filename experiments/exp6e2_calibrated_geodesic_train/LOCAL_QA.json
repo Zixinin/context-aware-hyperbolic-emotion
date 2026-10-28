@@ -1,0 +1,32 @@
+{
+  "status": "LOCAL_CPU_CONTRACT_TESTS_PASS_UBUNTU_GPU_PENDING",
+  "tests": 15,
+  "checks": {
+    "cpu_contract_tests": {
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "-X",
+        "utf8",
+        "/Users/fengzixin/Desktop/PSP303-FYP/context-aware-hyperbolic-emotion/experiments/exp6e2_calibrated_geodesic_train/tests_local.py"
+      ],
+      "exit_code": 0,
+      "log_sha256": "04f7bcd1476bd1abaec2259e411987474a265fd46ad7bf6c7fcb04ba2694874e"
+    },
+    "shell_parse": {
+      "command": [
+        "bash",
+        "-n",
+        "/Users/fengzixin/Desktop/PSP303-FYP/context-aware-hyperbolic-emotion/experiments/exp6e2_calibrated_geodesic_train/launch.sh"
+      ],
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "test_model": "toy CPU model for loss/observer/optimizer/report contracts; NOT a RoBERTa run",
+  "frozen_source_directories_unchanged": 7,
+  "gamma_G": 0.02091538317504222,
+  "real_Ubuntu_fresh_replay": "PENDING",
+  "real_Ubuntu_smoke": "PENDING",
+  "formal_training_runs_started": 0,
+  "new_Test_inference": 0
+}

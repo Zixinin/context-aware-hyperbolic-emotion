@@ -1,0 +1,31 @@
+{
+  "A1S_success_sha256": "9a3c1c79dae2b7da33f225220ec947a3b4ce5b7056d692440c2b172d0de30458",
+  "A1S_source_sha256": {
+    "launch.sh": "42fdd3f765ecdd9490adcc9b22e064a14f95605831cfd651b46ece5ac82445ec",
+    "export_review.py": "2dc2c0bba06aeec0b9a459a427e94265b3cb107c7f385f0f53f8f3c210717ec6",
+    "LOCAL_TESTS.log": "57d47f9407e55ec2d36385ef710f1685b7df8f05f9836c175259a290c701f5c1",
+    "PACKAGE_MANIFEST.json": "1c680286e8cc0637150156d51e9ae2cadc4fef5e7f7e5d42ca4fe2525a39ca99",
+    "TRAIN_PROMPT.md": "c84d931ebe91cc8c5973400461cb55d72592bea5a5a1c8fed3114b74df87c044",
+    "srun.py": "58ba997191fe6e231840f9fdad0dea946ea77415069a34ead527b01499406913",
+    "LOCAL_QA.json": "240b5805ed7d653d1c45b5d8e8b113fe6db05b4ebb10e607fe91c08355838bc1",
+    "scommon.py": "030bb29331b84d2507820d389f274eb7b7d60a4011fcc3968f1445414647d5a7",
+    "tests_scaled.py": "4db8192f37c8c196ff24f16568e3bcd1c7f1a043bf90c4fa9955963cb89ecc12",
+    "geometry_core.py": "e36f32d4c535c3b8b062e98a3e1b754b236a10d444c5e8effee50e46dd452659",
+    "README_CN.md": "5209219ae1345e7731449fd3fcf39e62602d4b40f8303ab66a9a4fe836b15f4b",
+    "scaled_model.py": "e85080fda929e0041ccee85c8decb244ce56f6f53a7a99e15517465a3a80ded4",
+    "IMPLEMENTATION_AUDIT.md": "5b05ee8363c1561b185f1fbbb0d4f71b99ba1a5de5fe3e623658c0182439cd3e",
+    "INPUT_REFERENCE.json": "15c26d7c4cc3bc49f94fed2dd212779be235ac29b25f3d852f59a4fb95c90a15",
+    "probes.py": "3216a933ef4b5b0cf98d35fa2d2b417533b28c43297f87b7e0ec3b835dd090a9",
+    "diagnostic_core.py": "967a3b6f9bd7ea97696ac41a7946e7232cceaae34fe7c2db178870d26b85f38e",
+    "reporting.py": "6139fe93ea85dd2c6a43400cc957dccc503586425cc61ee6685c9575b4745996"
+  },
+  "Exp6D_run": "results/exp6d_hypemo_code_audit/run_20261022T063911Z_Ktwq95al",
+  "Exp6D_source_sha256": {
+    "generate_reports.py": "74152a1246dc7b92ee7252509fe82ce41d0e85eb6bc3af0c970d75c9597654d2",
+    "run_readonly.py": "8c16c535e7b07075702be9dbab95dd8cec7d98d6d7a366a04cfa248206ab26bf",
+    "check_original_formula.py": "11af8121fcc794ca6045d852e05969ca29d4dae42f6b0d2b05c2c87466708d59",
+    "verify_saved.py": "2227200af447c1d380eba869ee0c1e9a36d0eace54dbc34efa5603a05314d735",
+    "audit_math.py": "86b9a2ad00a5c9eac1a70ad89fcf0088dffb24f5716cef6bdb800cd72fea30fa"
+  },
+  "audited_A1S_checkpoint_sha256": "9e2f537d40cd97a7c432e734f3357ded1cce68ce3daaa4593d94366a1e7abb6b"
+}

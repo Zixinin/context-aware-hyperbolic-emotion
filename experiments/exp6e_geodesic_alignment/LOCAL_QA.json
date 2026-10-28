@@ -1,0 +1,41 @@
+{
+  "status": "LOCAL_CPU_CHECKS_COMPLETE_UBUNTU_PENDING",
+  "created": "2026-10-27T11:44:04.079256+00:00",
+  "unit_tests": 19,
+  "checks": [
+    {
+      "name": "UNIT_TESTS",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3",
+        "-X",
+        "utf8",
+        "/Users/fengzixin/Desktop/PSP303-FYP/context-aware-hyperbolic-emotion/experiments/exp6e_geodesic_alignment/tests_local.py"
+      ],
+      "exit_code": 0,
+      "log_sha256": "645ec1354ce50f0232f4eb8425669ac229667edb3e46c6c03cc46bb960921fee"
+    },
+    {
+      "name": "LAUNCH_PARSE",
+      "command": [
+        "bash",
+        "-n",
+        "/Users/fengzixin/Desktop/PSP303-FYP/context-aware-hyperbolic-emotion/experiments/exp6e_geodesic_alignment/launch.sh"
+      ],
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "python": "3.12.3 (v3.12.3:f6650f9ad7, Apr  9 2024, 08:18:47) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "torch": "2.6.0",
+  "cached_A1_train_cohorts": 10,
+  "full_RoBERTa_GPU_gradient_audit": "PENDING",
+  "GPU_training": "NOT_ATTEMPTED",
+  "new_Test_inference": 0,
+  "original_labels_sha256": "648b6ecec551df27b02b70d378f59e0a879d662ae0dd9413c857fbc89030a1db",
+  "cached_aux_scale_ratio_range": [
+    4.424236609254548,
+    11.98961599440323
+  ],
+  "pretraining_scale_review_required": true,
+  "formal_training_blocked_by_declared_gate": true
+}

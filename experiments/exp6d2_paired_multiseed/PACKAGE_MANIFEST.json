@@ -1,0 +1,11 @@
+{
+  "FROZEN_SOURCE_REFERENCE.json": "173aaaa709a4d31927ff5a8883617a63f7a1ce8f6394ab9e6f29d18148a59bd7",
+  "LOCAL_QA.json": "5b7dea76ab491970cab022b7cc73c94ac056b737cd8053c18202c506332c7418",
+  "PROTOCOL_CN.md": "414002f37b2556712406bc2aaed3ddb52ebd147a4d03bd778e4fb43b35f407c6",
+  "launch.sh": "bec52e0eaefcce3ebcd27b9927a450e205a411dd4cac88e333740d7d50883531",
+  "pcommon.py": "8a4cced8dc88d8a96ec846a0660f7158f502256520df7230b1b8968ed9b335d2",
+  "preport.py": "74734c083c0f3f99717b08cfe7e8dbf4319a6edc489989133ad38345ab311f31",
+  "psuite.py": "3f39852ac6c8d40b719bc188916c5cfd518d8db66bae9c1e746928b7d24a36a5",
+  "ptrain.py": "28a18e513cecf16bd1f403cc6ab79c5c26eaab51edb69067a71f6151b1aea488",
+  "tests_local.py": "30e3c35af60f4dfbd2a83c44f7a28723c080b5d7b6dfaeb2c0a54b1df7b29b1b"
+}

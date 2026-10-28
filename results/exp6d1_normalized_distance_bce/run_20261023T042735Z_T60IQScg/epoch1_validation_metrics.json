@@ -1,0 +1,28 @@
+{
+  "threshold": 0.3,
+  "num_examples": 3834,
+  "micro_precision": 0.6467757459095284,
+  "micro_recall": 0.5825747724317295,
+  "micro_f1": 0.6129988597491448,
+  "macro_precision": 0.5351709125952764,
+  "macro_recall": 0.46976876523715994,
+  "macro_f1": 0.48861443252575393,
+  "weighted_precision": 0.6323061146294214,
+  "weighted_recall": 0.5825747724317295,
+  "weighted_f1": 0.5960419735077352,
+  "rare_f1": 0.29228982973411466,
+  "total_predicted_positives": 4156,
+  "total_gold_positives": 4614,
+  "mean_predictions_per_example": 1.0839853938445487,
+  "mean_gold_positives_per_example": 1.203442931175232,
+  "zero_prediction_examples": 228,
+  "zero_prediction_labels": [
+    "grief",
+    "nervousness",
+    "pride",
+    "relief"
+  ],
+  "macro_average_precision": 0.5158510995923938,
+  "average_precision_defined_labels": 27,
+  "mean_positive_probability_definition": "mean probability over gold-positive examples per label"
+}

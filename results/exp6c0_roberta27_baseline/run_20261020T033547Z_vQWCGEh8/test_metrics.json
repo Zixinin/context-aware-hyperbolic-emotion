@@ -1,0 +1,20 @@
+{
+  "threshold": 0.3,
+  "num_examples": 3821,
+  "micro_precision": 0.6027181406342328,
+  "micro_recall": 0.6737120211360634,
+  "micro_f1": 0.6362407734691756,
+  "macro_precision": 0.5772453917502945,
+  "macro_recall": 0.6022333511868477,
+  "macro_f1": 0.5792760013933288,
+  "weighted_precision": 0.6039033173543604,
+  "weighted_recall": 0.6737120211360634,
+  "weighted_f1": 0.6316462978867814,
+  "rare_f1": 0.5331602171451796,
+  "total_predicted_positives": 5077,
+  "total_gold_positives": 4542,
+  "mean_predictions_per_example": 1.3287097618424497,
+  "mean_gold_positives_per_example": 1.1886940002441406,
+  "zero_prediction_examples": 45,
+  "zero_prediction_labels": []
+}

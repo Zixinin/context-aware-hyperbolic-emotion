@@ -1,0 +1,9 @@
+{
+  "experiments/exp5a_controls/control_model.py": "939b5ed5cc845043421dc7d70df069aa23885c98045cfd3ea15388883166c6f3",
+  "experiments/exp5a_controls/control_train.py": "875e31ab842d1097aaad0f40349986efc5483e70db0fcd1925c6f23785c64455",
+  "experiments/exp5_label_aware_euclidean/config.json": "cfd1d136dcad5f649557bb56c032aa47822c8ebb19400517f26ae25f824e34f9",
+  "experiments/exp5_label_aware_euclidean/data.py": "8cc771589ed0b24dc5b97ab736b2368c0660fc4e7437bbebdc4c8e0cdb6fae08",
+  "experiments/exp5_label_aware_euclidean/model.py": "e79e9cac0a7f7267c0391c94ac44a5b0b9231ce7de54cbc01fd1d34558e2c7de",
+  "experiments/exp5_label_aware_euclidean/train.py": "8be523cf4b22670b383f0c81005fcf847135879c3fdbb0cb65c835650d0e76b1",
+  "experiments/exp5_label_aware_euclidean/metrics.py": "22e15b6f56e2d12056372e4f2f2108a02ee8b9a861aa97e89c7fd4aa1a14125e"
+}

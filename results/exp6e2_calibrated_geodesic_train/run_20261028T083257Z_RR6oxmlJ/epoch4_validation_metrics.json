@@ -1,0 +1,23 @@
+{
+  "threshold": 0.3,
+  "num_examples": 3834,
+  "micro_precision": 0.6148030242737763,
+  "micro_recall": 0.6697009102730819,
+  "micro_f1": 0.6410788381742739,
+  "macro_precision": 0.5968810165880271,
+  "macro_recall": 0.5951791622507356,
+  "macro_f1": 0.5849334226388683,
+  "weighted_precision": 0.6146204269280756,
+  "weighted_recall": 0.6697009102730819,
+  "weighted_f1": 0.6383349978918504,
+  "rare_f1": 0.5467775024529684,
+  "total_predicted_positives": 5026,
+  "total_gold_positives": 4614,
+  "mean_predictions_per_example": 1.310902451747522,
+  "mean_gold_positives_per_example": 1.203442931175232,
+  "zero_prediction_examples": 52,
+  "zero_prediction_labels": [],
+  "macro_average_precision": 0.6027367457931171,
+  "average_precision_defined_labels": 27,
+  "mean_positive_probability_definition": "mean probability over gold-positive examples per label"
+}

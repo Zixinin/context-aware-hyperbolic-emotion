@@ -1,0 +1,10 @@
+{
+  "workflow_pdf": {
+    "filename": "mac+ubuntu\u5de5\u4f5c\u6d41.pdf",
+    "sha256": "57c596a30a0f556bbf337dddb0f235e63ad919dfc95fb98dddec1747309bebce"
+  },
+  "user_experiment_prompt": {
+    "filename": "USER_EXPERIMENT_PROMPT.md",
+    "sha256": "c31e6b8e729dcb9ab548c0983b9ec6e103754551fafb08b99a895a5f24e5e88d"
+  }
+}

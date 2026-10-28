@@ -1,0 +1,20 @@
+{
+  "A0_success_sha256": "3b5d3b594c6e2efd58b20730cdc7378d8536b7504bee52a6bdc07af3c4a2b994",
+  "A1_success_sha256": "fd37cf32760e67ad9826b4fb1811e623e27b2ced78c184985aeb563944e13337",
+  "S_success_sha256": "477f3c8bdc8a0918be5fc67a59cc9b03e2624a3a210adf4fbdcff25c32429313",
+  "S_inputs": {
+    "FIXED_TRAIN_COHORTS.json": "8373f90d6c4d9ed84e20ff025a612d90dfa27056dcc4d5ed0d0f05260ddeab84",
+    "NO_UPDATE_PROOF.json": "ac0ac91e6242d0285b248360e2ac0baa9887cec3954ac1d60ef924383887ce49",
+    "03_losses_and_gradients.csv": "01c20a6a6f466f8faf68ce3f2648c0748f7a345e6ff4248c8474c20f92387e36",
+    "03_gradient_summary.csv": "91bcad1d1d562a2c1e962dded88e3dad96ae6885e936dc3e5332c80fa284bd33",
+    "04_scale_summary.json": "b7d4a2b8b147b9c6b20b76faceef36b4bb09d3f2478074b75115b5d38cbd3945"
+  },
+  "D_inputs": {
+    "tools/run_diagnostics.py": "341d0d476f6816377759520332e4a19a6192c780715b9f9163d506a7057b3c80",
+    "tools/diagnostic_core.py": "967a3b6f9bd7ea97696ac41a7946e7232cceaae34fe7c2db178870d26b85f38e"
+  },
+  "reusable_code_sha256": {
+    "geometry_core.py": "e36f32d4c535c3b8b062e98a3e1b754b236a10d444c5e8effee50e46dd452659",
+    "diagnostic_core.py": "967a3b6f9bd7ea97696ac41a7946e7232cceaae34fe7c2db178870d26b85f38e"
+  }
+}
