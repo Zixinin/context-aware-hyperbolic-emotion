@@ -1,0 +1,78 @@
+{
+  "definition": {
+    "label_ids": [
+      16,
+      21,
+      23,
+      19,
+      12,
+      24,
+      14
+    ],
+    "label_names": [
+      "grief",
+      "pride",
+      "relief",
+      "nervousness",
+      "embarrassment",
+      "remorse",
+      "fear"
+    ]
+  },
+  "validation": {
+    "fixed_0.30": {
+      "rare_label_names": [
+        "grief",
+        "pride",
+        "relief",
+        "nervousness",
+        "embarrassment",
+        "remorse",
+        "fear"
+      ],
+      "mean_rare_label_f1": 0.5058759647167613,
+      "mean_non_rare_label_f1": 0.5263025526392094
+    },
+    "validation_selected": {
+      "rare_label_names": [
+        "grief",
+        "pride",
+        "relief",
+        "nervousness",
+        "embarrassment",
+        "remorse",
+        "fear"
+      ],
+      "mean_rare_label_f1": 0.5157988034540755,
+      "mean_non_rare_label_f1": 0.5231278599734284
+    }
+  },
+  "test": {
+    "fixed_0.30": {
+      "rare_label_names": [
+        "grief",
+        "pride",
+        "relief",
+        "nervousness",
+        "embarrassment",
+        "remorse",
+        "fear"
+      ],
+      "mean_rare_label_f1": 0.46425177458630545,
+      "mean_non_rare_label_f1": 0.5318357096789817
+    },
+    "validation_selected": {
+      "rare_label_names": [
+        "grief",
+        "pride",
+        "relief",
+        "nervousness",
+        "embarrassment",
+        "remorse",
+        "fear"
+      ],
+      "mean_rare_label_f1": 0.4747398975144506,
+      "mean_non_rare_label_f1": 0.5272944475750866
+    }
+  }
+}

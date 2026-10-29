@@ -1,0 +1,79 @@
+{
+  "status": "EXP5A_MULTISEED_MODEL_VERIFIED",
+  "seed": 2026,
+  "completed_at": "2026-10-13T12:04:29.682440+00:00",
+  "source_sha256": {
+    "multiseed": {
+      "README.md": "cd7867475a2e00dac9d16120e092f4736069318b334362f8d9288483c2a0ad80",
+      "frozen_dependency.json": "1cb8391a251e0a846b973dfb63a4a2ac107312862144acdf01025bfd1610500e",
+      "launch.sh": "a50d8d6c166328ac6ad00c99dcb5d5b4dc527fdc4766d35e6b6154e4d1906913",
+      "multi_audit.py": "0c46714381bcb2b7519d3b9ea0588213a1580eaa68f91faae532b6a2f34ae628",
+      "multi_common.py": "235493f30b56557a8019081ae7761520442ee522229ebc7e3f9f48d2ec3aa92e",
+      "multi_compare.py": "c01b7924f13ae8a634ee782efc1394136c9f6095c2fb323f23ac0bc47707d2ed",
+      "multi_tests.py": "5ddaaa5cc098a5953522153453da2c149b6fdcd5a2f4e52bea9d5f621f565ef4",
+      "multi_train.py": "64287f3047b3760c84153bb84457a3fd4322ba5cccbebc5b9b3d69d2eb9fdcd1",
+      "multi_verify.py": "56eafbadaef26ae9ac74a70beb411f118a522ff938f1ed9bc502b9c03621534c"
+    },
+    "frozen": {
+      "controls": {
+        "README.md": "aea11cb698bb3a5392337b2bf4f6b723683487b86ad573162cbb28b9a2330133",
+        "control_audit.py": "eb275e670253d0f196ba637c54db5632b13577d3dc957f21b0e70f81b9ade5f6",
+        "control_common.py": "13c4296c33f095860bb14c9a7a351aab3a2012adf9950c1a10568e0fa5a070aa",
+        "control_compare.py": "5c367a22059a81dd4cb6c02be629c01e448e596d41b3e4027f57291960faf68d",
+        "control_model.py": "939b5ed5cc845043421dc7d70df069aa23885c98045cfd3ea15388883166c6f3",
+        "control_tests.py": "97d9c103f29f6c9cdd34fb59eb82a0c296db7dd8eeb57caa060f7ccb0e6843d8",
+        "control_train.py": "875e31ab842d1097aaad0f40349986efc5483e70db0fcd1925c6f23785c64455",
+        "control_verify.py": "4a4c8df4602887df749d83b776dde88095bbca5ea4c838520a59db736510ff37",
+        "frozen_dependency.json": "1f31ba45e6f3e710f95d71c04bb5cf1bb24ac1f48f3d97fa674f53f70c7e8d70",
+        "launch.sh": "c2e2d68d323bc08a3d7c6e29204e11f72e189eb876ea2e3550e1459c2eae9946"
+      },
+      "exp5a": {
+        "README.md": "45a3eb001d208ba290f9ae2744def52894b51370f5fd5d1dcc5484dc8f145ece",
+        "config.json": "cfd1d136dcad5f649557bb56c032aa47822c8ebb19400517f26ae25f824e34f9",
+        "data.py": "8cc771589ed0b24dc5b97ab736b2368c0660fc4e7437bbebdc4c8e0cdb6fae08",
+        "exp5lib.py": "f89b71c0f73467ddec9d134ae66d1d3bd3d4bd92caa02af80233be570425a07d",
+        "launch.sh": "56ee87e0e1f1c27e165820d6e7cab17b02694988a6af33c466a5dc5ea2e650a3",
+        "metrics.py": "22e15b6f56e2d12056372e4f2f2108a02ee8b9a861aa97e89c7fd4aa1a14125e",
+        "model.py": "e79e9cac0a7f7267c0391c94ac44a5b0b9231ce7de54cbc01fd1d34558e2c7de",
+        "notify.py": "9136fc66c724df0ce0a748c1d316b79086fb97ecb0a9a8abe13e8084dcdf02e8",
+        "preflight.py": "33fdf18437636d243c1bc8732c2d8e540e0a80fa1de8002ba3994efa4f002674",
+        "train.py": "8be523cf4b22670b383f0c81005fcf847135879c3fdbb0cb65c835650d0e76b1",
+        "unit_tests.py": "0c0351e67acf73e43aa9f6e59254d8a943ee61f3172a1e3048ac8ebce441a2ac",
+        "verify.py": "a5f599c1770be0fc5407721ed94dcdcaea66ad92b51077d558aba44d0cdeffe1"
+      }
+    }
+  },
+  "artifacts_sha256": {
+    "checkpoint_best.pt": "a88bba27edcfc71b95c7a661bfd7e9985146310c7ceba87d36c688db78ccd852",
+    "checkpoint_selection.json": "b9673d90a605e50401529bd9c64f578789e5bebd8b9698a411e095fdc9916b93",
+    "checkpoint_tokenizer/special_tokens_map.json": "b6d346be366a7d1d48332dbc9fdf3bf8960b5d879522b7799ddba59e76237ee3",
+    "checkpoint_tokenizer/tokenizer.json": "58aab9fca3cc9f1f851a638ae77a21bd309c219092b2bf3f5e04fe200927d70b",
+    "checkpoint_tokenizer/tokenizer_config.json": "1c441dfe412d9d7e47c960029a48a0159c23a38a9ab41b465d90fb1f520d4ced",
+    "checkpoint_tokenizer/vocab.txt": "eeaa9875b23b04b4c54ef759d03db9d1ba1554838f8fb26c5d96fa551df93d02",
+    "config.json": "f45b27b1a35b999906b906cd7492f5617cfa04fed56a352e339834f8ee1addef",
+    "dataset_statistics.json": "689a03e07eac06df8bca269e1ab978a5ca1b3538167d235ab5575d3496cbad48",
+    "environment.json": "6abf82aa345e9bcb317fb5cc4e202358b28b595a427107b2c1414d42a3a3df82",
+    "first_batch_shapes.json": "016f21536e89acd9a4e0f05aebe47e4254f0db0a8bfd3b2be31d0b9560f3eedb",
+    "per_label_metrics.csv": "379098e5f6aeb3452d9c2f93a5cac8b066d21ea74d66a5606ba66f437d70bfed",
+    "pip-freeze.txt": "5ecbfdcb39a9a3a5a6e28308cc7de8ef536a380bf3db978f8cea340879a88554",
+    "rare_label_metrics.json": "c61b6681e00297ba75173613895a48ff23d7ab138733bedfbda6cd7734ebab26",
+    "sample_ids.json": "787d15c64b9915af367d4aa59f43dd63267ddd61977c1d1d7f7c0c7ca7c93c37",
+    "test_fixed_0.30_metrics.json": "99bacc8e6ffaa636c6ae0ed7a1dc4c13ef2b9ccd087c1e8d3dfaad4f41bcc315",
+    "test_fixed_0.30_per_label.csv": "379098e5f6aeb3452d9c2f93a5cac8b066d21ea74d66a5606ba66f437d70bfed",
+    "test_metrics.json": "f5b2e993f4e2c3682d9b7cc34a565032585cea18e314f4b9d17f199c5a808bea",
+    "test_predictions.npz": "b3c95585d4e7211ecdc1139c5071e58831e225c2a71209477840494140c9c5af",
+    "test_validation_selected_metrics.json": "cf95799e905b05c9b8a22d492adb0fc2ed3f62086cac7603858daa6308f68341",
+    "test_validation_selected_per_label.csv": "51134087b288d37b8556de869b456b3198038164957163c59dfdb688c5d4bbb7",
+    "threshold_search.csv": "f9b4b3c49ecbaf4e43c27731769e146f2ec0efc26b439545838cd6c10fc8b528",
+    "threshold_selection.json": "7cd3a8cff0adabc187fe8b72bec8185e3707267d7e9aa87b1bd370b6cd9ea2bc",
+    "training_log.csv": "2deaacbde7ed69cfbfb28c755f02549951df903c38ed260afbbcf7c93d3f4177",
+    "validation_fixed_0.30_metrics.json": "2a21a7ab0b17012b1efe65114e99565e93ff49b9c120f9c249a82629ab9cc7e7",
+    "validation_fixed_0.30_per_label.csv": "166d16b8ecb9ce0a9008e3188005738cd4e65f382d408ac0079f04924f717488",
+    "validation_metrics.json": "a5742fff067e06baa9b3d5645b61eaed234315b3b5ebcbe124241e9461c4dfe1",
+    "validation_predictions.npz": "10cb3eb5731396af856121b4ca96f525f2e0599e865fdeb9dd708ba50cd2d5a6",
+    "validation_validation_selected_metrics.json": "88781d49d5dabd402c484f05d31c9e9873617366de3d85664cd244fd66045acb",
+    "validation_validation_selected_per_label.csv": "22c9e56e6c4fa4513a2b76375818d7935872e3016fceac21fe26364056810348"
+  },
+  "representation": "cls",
+  "mode": "full"
+}

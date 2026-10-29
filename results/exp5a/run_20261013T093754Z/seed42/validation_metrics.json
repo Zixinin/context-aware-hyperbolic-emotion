@@ -1,0 +1,28 @@
+{
+  "fixed_0.30": {
+    "threshold": 0.3,
+    "num_examples": 5426,
+    "micro_precision": 0.5633863965267728,
+    "micro_recall": 0.6101880877742947,
+    "micro_f1": 0.5858540255831453,
+    "macro_precision": 0.5357286267372856,
+    "macro_recall": 0.5281250284236243,
+    "macro_f1": 0.5211959056585974,
+    "weighted_precision": 0.5630723617124953,
+    "weighted_recall": 0.6101880877742947,
+    "weighted_f1": 0.5833772064642352
+  },
+  "validation_selected": {
+    "threshold": 0.25,
+    "num_examples": 5426,
+    "micro_precision": 0.5405260332796564,
+    "micro_recall": 0.6313479623824452,
+    "micro_f1": 0.5824175824175825,
+    "macro_precision": 0.5084295775157969,
+    "macro_recall": 0.5511157807488543,
+    "macro_f1": 0.52129559584359,
+    "weighted_precision": 0.5450114142153513,
+    "weighted_recall": 0.6313479623824452,
+    "weighted_f1": 0.5830987709882106
+  }
+}

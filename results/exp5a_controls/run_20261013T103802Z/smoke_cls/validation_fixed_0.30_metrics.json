@@ -1,0 +1,13 @@
+{
+  "threshold": 0.3,
+  "num_examples": 500,
+  "micro_precision": 0.31462925851703405,
+  "micro_recall": 0.27162629757785467,
+  "micro_f1": 0.2915506035283194,
+  "macro_precision": 0.011236759232751217,
+  "macro_recall": 0.03571428571428571,
+  "macro_f1": 0.017094947735191636,
+  "weighted_precision": 0.08546158060064765,
+  "weighted_recall": 0.27162629757785467,
+  "weighted_f1": 0.130016246096717
+}
