@@ -1,0 +1,22 @@
+{
+  "name": "Exp6C-1D",
+  "new_training": false,
+  "optimizer_steps": 0,
+  "new_formal_test": false,
+  "prediction_analysis_split": "saved validation only",
+  "gradient_probes": "A1 best, eval FP32, train-only 10 cohorts <=16 each",
+  "write_root": "/home/zixinfeng/Documents/context-aware-hyperbolic-emotion/results/exp6c1d_hyperbolic_diagnostics/run_20261021T101516Z_cLRnltwT",
+  "tool_hashes": {
+    "diagnostic_core.py": "967a3b6f9bd7ea97696ac41a7946e7232cceaae34fe7c2db178870d26b85f38e",
+    "launch_body.sh": "617ad72aaacaa121ed0494acaf6e6bfdc1d46cdbcaed00ad0cbdab2614cdb680",
+    "run_diagnostics.py": "341d0d476f6816377759520332e4a19a6192c780715b9f9163d506a7057b3c80",
+    "tests_diagnostics.py": "9953a03f9a7c80b35be313586b3d8ace9a7e3f42dcba6f6b4bdd67f46db8815e",
+    "verify_bundle.py": "a802ce03e80e7fcb3d63fa0f67501bc7862e6a627a67bf1da6b67baa5b978ce5"
+  },
+  "stop_on_mapping_formula_gradient_disconnect": true,
+  "A0": "/home/zixinfeng/Documents/context-aware-hyperbolic-emotion/results/exp6c0_roberta27_baseline/run_20261020T033547Z_vQWCGEh8",
+  "A1": "/home/zixinfeng/Documents/context-aware-hyperbolic-emotion/results/exp6c1_roberta27_hypaux/run_20261020T050326Z_bvdWaaRL",
+  "max_wall_minutes": 30,
+  "geometry_curve": "c1 static released vectors",
+  "proposal_screen": "at least half targeted train cohorts ratio>1 AND cosine<-0.1 -> A gamma=.03; otherwise D paired-seed replication; proposals only"
+}

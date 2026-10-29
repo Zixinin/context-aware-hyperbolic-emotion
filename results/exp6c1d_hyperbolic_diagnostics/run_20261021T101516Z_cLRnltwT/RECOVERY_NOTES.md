@@ -1,0 +1,9 @@
+# Exp6C-1D v1.1 recovery
+
+v1在Ubuntu run_20261021T100824Z_x2vzgvI3因诊断器错误要求A0的validation_loss_diagnostics.json而退出。A0纯BCE写validation_loss到training_log.csv，不产出A1专属的辅助Loss JSON。原A0/A1封存检查先于PHASE1返回，报错发生在复制审核证据处；未进入本轮真实checkpoint梯度probe。
+
+修复仅针对新诊断器：copy_run_evidence按生产者schema区分A0/A1；公共文件仍严格必需；A1辅助JSON仍必需；先记录并核查所有缺失项再开始复制。没有补造A0文件或修改旧实验。旧失败目录保留；v1.1另建诊断run。
+
+新增两项回归检查：A0无辅助JSON通过；A1缺该JSON必须停止而不能静默略过。共15项本地CPU/合成检查通过。Bash/Python语法和嵌入包身份校验通过。未执行实际Ubuntu GPU诊断。
+
+成功生成review/Exp6C1D_review.tar.gz；再次失败则尽力生成review/Exp6C1D_failure_review.tar.gz（只用于排错，不是完整诊断结果）。两种情况均打印MAC_DOWNLOAD_COMMAND，需用户在Mac终端执行。下载目的目录为本v1_1准备目录。旧v1失败run目前没有自动生成审核包。

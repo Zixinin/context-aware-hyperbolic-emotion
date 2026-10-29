@@ -1,0 +1,34 @@
+{
+  "experiment": "Exp6C-1S input scaling diagnosis",
+  "scales": [
+    1.0,
+    0.3,
+    0.1,
+    0.03,
+    0.01
+  ],
+  "split": "fixed train-only Exp6C-1D cohorts; 145 unique IDs,160 cohort positions",
+  "model": "frozen A1 best checkpoint",
+  "new_training": false,
+  "new_test": false,
+  "new_validation_forward": false,
+  "gamma": 0.1,
+  "curvature": 1.0,
+  "precision": "FP32, float64 diagnostic reductions",
+  "model_eval": true,
+  "maximum_model_forwards": 60,
+  "maximum_autograd_calls": 150,
+  "wall_limit_minutes": 45,
+  "intervention": "only h -> s*h at hyper.encode entry on a newly loaded model",
+  "unchanged": "all weights, fixed label vectors, classification head, loss formula and numerical projection cap",
+  "acceptance": "scale1 forward exact parity; original D baseline tolerances rtol1e-6/atol1e-9 for gradient stats; others classification/BCE exact; all gradients finite",
+  "selection": "no scale selected by validation/test F1 or auxiliary loss; geometric diagnosis only",
+  "tool_hashes": {
+    "INPUT_REFERENCE.json": "0c31f69117b0c334d611798ac08b75fae070c187e19ed830cacb083cb3ddc9e6",
+    "frozen_diagnostic_core.py": "967a3b6f9bd7ea97696ac41a7946e7232cceaae34fe7c2db178870d26b85f38e",
+    "launch_body.sh": "c8f6931cb89e6ab82afabad32a4111195c0a3d0562ce5aaf18c9512006a91123",
+    "run_scaling.py": "e0b769c60f317ed7f6bba163f0267019f57c3ba1036b8339fc88e4b9299ed040",
+    "scaling_core.py": "e36f32d4c535c3b8b062e98a3e1b754b236a10d444c5e8effee50e46dd452659",
+    "tests_scaling.py": "9c56ddec0aefe5ff8e642bcf8abfc07bd27399faa06bbf3cbbceea7738bd7e15"
+  }
+}

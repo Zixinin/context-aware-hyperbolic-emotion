@@ -1,0 +1,53 @@
+{
+  "num_examples": 3834,
+  "threshold": 0.3,
+  "changed_example_count": 1105,
+  "changed_example_fraction": 0.28821074595722485,
+  "changed_label_decisions": 1431,
+  "A0_total_predicted_positives": 5083,
+  "A1_total_predicted_positives": 4740,
+  "TP_to_FN": 244,
+  "FN_to_TP": 161,
+  "macro_delta_pp": -2.114715626009543,
+  "rare_delta_pp": -10.279203030382483,
+  "labels_with_recall_decline": 20,
+  "rare_labels_with_recall_decline": 5,
+  "zero_support_labels": [],
+  "rare_contributions_pp": {
+    "grief": -8.16326530612245,
+    "pride": -1.3227513227513223,
+    "relief": -1.8140589569160996,
+    "nervousness": 1.0184937014205309,
+    "embarrassment": 0.3050561433114821,
+    "remorse": -0.028205926770362235,
+    "fear": -0.27447136255426435
+  },
+  "rare_negative_contribution_share": {
+    "grief": 0.7035628004825444,
+    "pride": 0.1140032315596715,
+    "relief": 0.15634728899612096,
+    "nervousness": 0.0,
+    "embarrassment": 0.0,
+    "remorse": 0.002430968501523299,
+    "fear": 0.023655710460139905
+  },
+  "rare_recall_changes": {
+    "grief": -0.46153846153846156,
+    "pride": -0.1333333333333333,
+    "relief": -0.1111111111111111,
+    "nervousness": 0.047619047619047616,
+    "embarrassment": -0.05714285714285716,
+    "remorse": -0.05882352941176472,
+    "fear": 0.011111111111111183
+  },
+  "train_frequency_ranked_low7": [
+    "grief",
+    "pride",
+    "relief",
+    "nervousness",
+    "embarrassment",
+    "remorse",
+    "fear"
+  ],
+  "low7_recall_decline_count": 5
+}

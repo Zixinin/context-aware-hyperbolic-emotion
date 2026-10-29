@@ -1,0 +1,26 @@
+{
+  "status": "LOCAL_CPU_AND_TRANSFER_TESTS_PASS_REAL_UBUNTU_GPU_PENDING",
+  "tests": 23,
+  "checks": {
+    "tests_local.py": {
+      "tests": 16,
+      "exit_code": 0,
+      "log_sha256": "f5394649d85dffe0f7254e533760cdd20b947c6002e964a701ff6117feff2b92"
+    },
+    "tests_transfer.py": {
+      "tests": 7,
+      "exit_code": 0,
+      "log_sha256": "e80531c0fa8a2ac9f35226d8860e4bcd2489e4dbfb29992824914c2243166843"
+    }
+  },
+  "scientific_executable_bytes_unchanged": [
+    "mmodel.py",
+    "mrun.py",
+    "mprobe.py",
+    "mreport.py"
+  ],
+  "no_dependency_changes": true,
+  "formal_training_started": false,
+  "external_backup": "NOT_ATTEMPTED_USER_AUTHORIZED_DEFER",
+  "Mac_backup": "PENDING_USER_TRANSFER"
+}

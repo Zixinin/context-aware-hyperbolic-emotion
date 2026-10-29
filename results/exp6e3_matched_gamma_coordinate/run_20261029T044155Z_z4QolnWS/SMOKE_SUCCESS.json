@@ -1,0 +1,13 @@
+{
+  "status": "MATCHED_COORDINATE_SMOKE_PASS",
+  "plan_sha256": "3c30acc0428176ca70ba85b37fc401c5f434d8dba6123f006808913e649cf0c4",
+  "smoke_artifacts_sha256": {
+    "SMOKE.json": "fe985c1a8ea211ba6dc80c2c0a27b85383cf616a65bcb8ccf9a59d2a6f2849c8",
+    "discarded_weights.pt": "a2b8778ccf0290d782ae6a88918c9b4621de4a60b143a8127e04f8edf7a47dbb"
+  },
+  "pretraining_probe_tags": [
+    "fresh_initial"
+  ],
+  "calibration_replay_sha256": "6b6e8a97265462be34d4c364ffb64c18f3d01d3e882fb56afe36fb635952e0ee",
+  "completed": "2026-10-29T04:45:09.292927+00:00"
+}

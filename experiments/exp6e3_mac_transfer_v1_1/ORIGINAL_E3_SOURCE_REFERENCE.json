@@ -1,0 +1,20 @@
+{
+  "PROTOCOL_CN.md": "1d55b6dc8c0940ecb67c65aec2ec33f1d4640aacbb039046394bba7633c28457",
+  "launch.sh": "86640b6a4058d1854eb38d58399fc5b483c3ca1c3c4724080275d0e7f7c7ee0c",
+  "mreport.py": "5cd15d4918bbd503ae91aa6ae20793be4b24f9084f79d3a1a41c31ffb700bb67",
+  "USER_EXPERIMENT_SPEC.md": "df6ac3da3d64c3671a6e7269ad60223742cf821f9d69640a82d9cf0e7474509c",
+  "PACKAGE_MANIFEST.json": "5a8502b315b2f8c0732c5ed7f93a5465fc6b50f7d321297bef900c25a6b6b06f",
+  "mprepare.py": "168cc90fa70bac3ef808f3d8eacf5c7b34c8cf2beb1218f22ca37b51cb50566f",
+  "LOCAL_QA.json": "67c1639e3961475f518def9bf5d8dff95935cdb89cd4c93d1d58328923c97767",
+  "mrun.py": "e9d24c702f1ceccffb1f6e9a0c576f2d2846c678615054e934576cc06445e28f",
+  "mcommon.py": "c3008f5c67fbf325ad05692205f4a16bce5e5c7270ab6abea2aff797f519ef1c",
+  "mmodel.py": "4a00c9182701f66cc671df9744315216a4e3f8316df7129393b065af998509a4",
+  "backup.sh": "7206f98298d49e3aa9b116816457eb0f61b41175f3c5eabcb1b4c85a347eddc7",
+  "verify_migration.py": "aec26a2df65c1f6cf1d2ee8a3bd37f738fc22919371535ee1f72e294a8f569b7",
+  "tests_local.py": "7f28359bdbd6a71b20da266f5e2f0f7e0b65b46d1c0d37bd63b4dff9db2892af",
+  "mprobe.py": "d47e646131995316f81180e15c3ed0df4ce188e61fcb4cbb7f0e98349b701515",
+  "final_status.py": "ed130ad01f86b6dbed018fb137b48da220af5e621bdbc33cde4ea225e0460a1b",
+  "INPUT_REFERENCE.json": "4746e6e78bcce5461a7bdab4db93b626b7ee34f0f4b08152e1bb84cd1a7d3c16",
+  "github_prepare.py": "ede8f99f58eb374eab62b590bf8f13cc83c551e0d27a669e93c32042cde912af",
+  "migrate.py": "4e22774e1a2b3e20a997bc15aec190c6fcea3f3032a21916b152e30e6c477ac4"
+}

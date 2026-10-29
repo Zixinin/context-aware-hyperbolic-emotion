@@ -1,0 +1,63 @@
+{
+  "roots": [
+    "root"
+  ],
+  "max_longest_path_edges": 3,
+  "max_levels_including_root": 4,
+  "original_edges": 75,
+  "cover_edges": 33,
+  "redundant_transitive_edges": 42,
+  "missing_transitive_closure": 0,
+  "missing_canonical_tree_nodes": [],
+  "noncanonical_tree_nodes": [
+    "ambiguous",
+    "negative",
+    "nervousment",
+    "positive",
+    "root",
+    "semi-negative",
+    "semi-positive"
+  ],
+  "nervousment_in_tree": true,
+  "nervousness_in_tree": true,
+  "nervousness_in_released_vectors": true,
+  "original_vectors_match_Exp6B": true,
+  "fixed_vectors_norms": {
+    "n": 27,
+    "min": 0.9927296809644236,
+    "median": 0.9966615733955332,
+    "mean": 0.9960402693376649,
+    "p95": 0.9987070209503655,
+    "max": 0.9989144614981014
+  },
+  "within_parent": {
+    "n": 64,
+    "min": 5.063452675599793,
+    "median": 9.804033801090974,
+    "mean": 9.51845775440734,
+    "p95": 10.520036440976474,
+    "max": 10.57018226802474
+  },
+  "between_parent": {
+    "n": 287,
+    "min": 9.340401552006158,
+    "median": 12.097048862450029,
+    "mean": 11.999904810754677,
+    "p95": 14.006700347688984,
+    "max": 14.578605118391403
+  },
+  "unknown_pairs": 0,
+  "source_sha256": {
+    "data/go_emotion/label_tree.tsv": "c31155b5fd7f0a4e1dd8493de937b87d096fad698d4c030582ff1c34b11f1b22",
+    "train_label_embedding.py": "8f287352c92f4f346ba479887f6b1366817c2a4eab71b43dd40b1e4c68fb9fbf",
+    "config.py": "5f907d2bcfefdac8ba2fdd16ce8a847c8789c4a21da961a0f3459debc4f3d3b4",
+    "manifolds/poincare.py": "32b74c178b9e44e9189d116bbabf59ac0acf6f7d32beaeaa16e3457dbf168e85"
+  },
+  "vector_source_sha256": "2695b98e160e79c62533d6bee55fdbcfdbbcba87cbcde8ab6db2734dc16ab20a",
+  "geometry_contribution_to_classification": "NOT_IDENTIFIED_BY_A0_A1",
+  "hierarchy_direction": "TSV child-ancestor reversed as Relations(reverse=True)",
+  "trainer_positive_edges": "transitive closure excluding edges from root",
+  "extra_typo_node_participates_in_declared_label_pretraining": true,
+  "extra_typo_node_exported_as_formal_class": false,
+  "spelling_causal_effect_on_pretraining": "INCONCLUSIVE: released fixed vectors/config/tree alone do not recover the complete label-training trajectory"
+}
